@@ -1095,10 +1095,16 @@ a {
         height: 200px;
     }
 
-}
+    /* We represent the next generation of housewares STYLING START HERE */
+    .WeRepresent .headingContent {
+        padding: 40px 0;
+    }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+    .WeRepresent .headingContent p span {
+        font-size: 34px;
+        line-height: 60px;
+    }
+
     #desktopNav {
         flex-direction: column;
         padding: 10px;
@@ -1117,5 +1123,42 @@ a {
 
     #desktopNav .right-nav {
         margin-top: 20px;
+    }
+
+}
+
+/* Responsive Styles */
+@media (max-width: 400px) {
+    /* We represent the next generation of housewares STYLING START HERE */
+    .WeRepresent .headingContent {
+        padding: 40px 0;
+    }
+
+    .WeRepresent .headingContent p span {
+        font-size: 26px;
+        line-height: 47px;
+    }
+    
+    .representImages1 {
+        gap: 7px;
+    }
+
+    .imageContainer {
+        height: 12rem;
+    }
+
+    .imageContainer img {
+        width: 10rem;
+        height: auto;
+    }
+
+    .imageContainer .btn {
+        bottom: -40px;
+        padding: 4px 1px;
+        border-radius: 3px;
+    }
+
+    .imageContainer:hover .btn {
+        bottom: 3px;
     }
 }

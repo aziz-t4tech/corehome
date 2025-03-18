@@ -57,7 +57,11 @@ gsap.to("#centerSlider", {
 });
 
 
-const tl = gsap.timeline({
+const mm = gsap.matchMedia();
+
+mm.add("(min-width: 768px)", () => {
+  // **For Large Screens (Tablets & Desktops)**
+  const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".sliderBottom",
       start: "top bottom",  
@@ -65,25 +69,44 @@ const tl = gsap.timeline({
       scrub: 1,
     }
   });
-  
-  
-  tl.to({}, { duration: 1.2 }); 
-  
-  
+
+  tl.to({}, { duration: 1.2 });
+
   tl.fromTo(
     ".sliderBottom h2",
     { scale: 1, autoAlpha: 0, y: -200, ease: "power4.in" },
-    { scale: 2.1, autoAlpha: 1, y: 100, ease: "power4.out", duration: 5 }
+    { scale: 2.5, autoAlpha: 1, y: 100, ease: "power4.out", duration: 5 }
   );
+});
+
+mm.add("(max-width: 767px)", () => {
+  // **For Small Screens (Mobile Devices)**
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".sliderBottom",
+      start: "top bottom",  
+      end: "bottom top",
+      scrub: 1,
+    }
+  });
+
+  tl.to({}, { duration: 1 });
+
+  tl.fromTo(
+    ".sliderBottom h2",
+    { scale: 1, autoAlpha: 0, y: -100, ease: "power4.in" },  // कम height shift
+    { scale: 1.7, autoAlpha: 1, y: 50, ease: "power4.out", duration: 3 }  // कम scale और duration
+  );
+});
+
   
 // logo section
 // **GSAP Media Query Setup**
-const mm = gsap.matchMedia();
 
 // **Logo Animation Function**
 function setupLogoAnimation() {
     mm.add("(min-width: 701px)", () => {
-        // **बड़ा स्क्रीन - 400px x 400px**
+        // **Large screen - 400px x 400px**
         return gsap.timeline({
             scrollTrigger: {
                 trigger: ".sliderBottom",
@@ -97,7 +120,7 @@ function setupLogoAnimation() {
     });
 
     mm.add("(max-width: 700px)", () => {
-        // **छोटा स्क्रीन - 250px x 250px**
+        // **Small screen - 250px x 250px**
         return gsap.timeline({
             scrollTrigger: {
                 trigger: ".sliderBottom",
@@ -111,10 +134,10 @@ function setupLogoAnimation() {
     });
 }
 
-// **पहली बार एनीमेशन चालू करें**
+// **Run the animation for the first time**
 setupLogoAnimation();
 
-// **Resize Event पर ScrollTrigger को Refresh करें**
+// **Refresh ScrollTrigger on Resize Event**
 window.addEventListener("resize", function () {
     setTimeout(() => {
         ScrollTrigger.refresh();
@@ -313,12 +336,12 @@ gsap.from(".whatWeDo .sideContent h2, .whatWeDo .sideContent p", {
 gsap.from(".whatWeDo .sideContent .icon-item", {
   y:100,
   autoAlpha: 0,
-  duration: 1.5,
+  duration: 1,
   delay: .5,
   stagger: .3,
   scrollTrigger: {
     trigger: ".whatWeDo .sideContent .icon-item",
-    start: "top 70%",
+    start: "top 80%",
     toggleActions: "play none play none"
   }
 });
