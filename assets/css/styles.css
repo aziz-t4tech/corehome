@@ -1,0 +1,1122 @@
+/* GLOBAL CSS SELECTORS GOES HERE */
+* {
+    color: white;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20000px;
+}
+
+a {
+    color: white !important;
+    text-decoration: none;
+}
+
+/* CUSTOM CSS SELECTOR GOES HERE */
+.header {
+    height: 30px;
+    box-shadow: 0 60px 60px 80px rgba(0, 0, 0, 1);
+    z-index: 10;
+    margin-bottom: 10px;
+    top: 0;
+    left: 0;
+}
+
+/* Logo Section - Centered */
+.logoSection {
+    z-index: 2;
+    position: fixed;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1; /* initially visible */
+  }
+  
+  .logoSection img {
+    height: 600px;
+    width: 600px; /* initial width */
+  }
+  
+  
+
+/* banner slider images goes here */
+
+.slider-container {
+    width: 100%; /* Fix width */
+    height: 700px; /* Fix height */
+    overflow: hidden; /* Prevent extra scrolling */
+    position: relative;
+    /* margin-top: 70px; */
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+}
+
+.bgImg1 {
+    background-image: url(https://cdn.prod.website-files.com/657f6997d13b05b913955807/65e5fed597d6a0d854aa41c8_TT_Assorted_Serveware_12.webp);
+}
+
+.bgImg2 {
+    background-image: url(https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c5149163922210978b839e_Chicago%20invitation_05-p-800.webp);
+}
+
+.bgImg3 {
+    background-image: url(https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c513983d5b2cc9a98a312a_Chicago%20invitation_06.webp);
+}
+
+.bgImg4 {
+    background-image: url(https://cdn.prod.website-files.com/657f6997d13b05b913955807/65e5fed597d6a0d854aa41c8_TT_Assorted_Serveware_12.webp);
+}
+
+.bgImg5 {
+    background-image: url(https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c5149163922210978b839e_Chicago%20invitation_05-p-800.webp);
+}
+
+.bgImg6 {
+    background-image: url(https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c513983d5b2cc9a98a312a_Chicago%20invitation_06.webp);
+}
+
+.bgImg7 {
+    background-image: url(https://cdn.prod.website-files.com/657f6997d13b05b913955807/65e6009c2db2704bcbaadebf_CCCOMB12-DS_07.webp);
+}
+
+.bgImg8 {
+    background-image: url(https://cdn.prod.website-files.com/657f6997d13b05b913955807/65847fa79d86b5d52258c969_46197_Crazy-Travel-Stories_Lifestyle_33-p-800.webp);
+}
+
+.bgImg9 {
+    background-image: url(https://cdn.prod.website-files.com/657f6997d13b05b913955807/65e60180f0503ed231f44adc_Wood%20with%20black%20coating.webp);
+}
+
+
+.slider .bgImg {
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    margin: 1px;
+}
+
+.bgImg h2 {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+/* slider bottom */
+.sliderBottom {
+    z-index: -1;
+    height: 500px;
+    bottom: 5%;
+}
+  
+  .sliderBottom h2 {
+    font-weight: 700;
+    color: white;
+    transform: scale(1); /* start at scale 1 */
+    opacity: 0;         /* hidden initially */
+}
+
+/* navigation menu styling start here */
+.myNavigation {
+    position: relative;
+    z-index: 9999;
+    top: 0;
+    transition: 2s ease-in .5s ease-out;
+}
+
+.myNavigation .menu-button {
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.myNavigation .menu-button .icons {
+    transform: rotate(-45deg);
+    transition: .5s ease-in-out;
+    width: 25px;
+}
+
+.myNavigation .menu-button:hover .icons {
+    transform: rotate(0deg) !important;
+}
+
+.myNavigation .menu-button .icon1 {
+    width: 8px;
+    height: 1.4px;
+    background: white;
+    margin: auto;
+}
+
+.myNavigation .menu-button .icon2 {
+    width: 20px;
+    height: 1.8px;
+    background: white;
+    margin: 5px auto 6px;
+}
+
+.myNavigation .menu-button .icon3 {
+    width: 9px;
+    height: 1.5px;
+    background: white;
+    margin: auto;
+}
+
+.menu-button .icons .icon {
+    border-radius: 20px;
+}
+
+.menu-button:hover .icons .icon {
+    width: 22px !important;
+    height: 1.5px;
+    transition: .3s ease-in-out;
+}
+
+.menu-button:hover .icons .icon1 {
+    height: 2px !important;
+}
+
+  
+.myNavigation  .logo-img {
+    max-width: 35%;
+    height: auto;
+}
+  
+.myNavigation  .search-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.1em;
+}
+
+.myNavigation .search-link svg {
+    font-size: 1.2em;
+}
+
+/* Background Images Container */
+#backgroundContainer {
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1; /* Initially hidden */
+    opacity: 0; /* Initially transparent */
+    transition: opacity .4s ease-in-out;
+}
+
+#backgroundContainer.visible {
+    z-index: 1000; /* Bring to front when menu is open */
+    opacity: 1; /* Make visible */
+}
+
+#backgroundContainer .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity .1s ease-in-out;
+}
+
+#backgroundContainer .background-image.active {
+    opacity: 1;
+}
+
+/* New Navigation Section */
+#desktopNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1001;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in;
+    opacity: 0;
+}
+
+#desktopNav.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#desktopNav .left-nav {
+    display: flex;
+    gap: 20px;
+}
+
+#desktopNav .left-nav .close-button {
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+}
+
+#desktopNav .left-nav .close-button .icons {
+    transform: rotate(0deg);
+}
+
+#desktopNav .left-nav .close-button .icon1 {
+    width: 20px;
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+#desktopNav .left-nav .close-button .icon2 {
+    opacity: 0;
+}
+
+#desktopNav .left-nav .close-button .icon3 {
+    width: 20px;
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+#desktopNav .right-nav {
+    display: flex;
+    gap: 20px;
+}
+
+#desktopNav .right-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+#desktopNav .right-nav a:hover {
+    color: #ccc;
+}
+
+/* Navigation Scroll Behavior */
+.myNavigation {
+    transition: top 0.3s ease-in-out;
+}
+
+.myNavigation.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Close Button Styling for Desktop Navigation */
+#desktopNav .left-nav .close-button {
+    cursor: pointer;
+    margin-top: 200px;
+}
+
+#desktopNav .left-nav .close-button .icons {
+    width: 25px;
+    height: 20px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+#desktopNav .left-nav .close-button .icon1,
+#desktopNav .left-nav .close-button .icon2,
+#desktopNav .left-nav .close-button .icon3 {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+#desktopNav .left-nav .close-button .icon1 {
+    top: 0;
+    transform: rotate(45deg) translate(5px, 7px);
+}
+
+#desktopNav .left-nav .close-button .icon2 {
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+#desktopNav .left-nav .close-button .icon3 {
+    bottom: 0;
+    transform: rotate(-45deg) translate(5px, -7px);
+}
+
+/* Navigation Links Styling */
+#desktopNav .left-nav .nav-links {
+    padding: 0 0 0 200px;
+    margin-top: 170px;
+}
+
+#desktopNav .left-nav .nav-links li {
+    margin: 15px 0;
+}
+
+#desktopNav .left-nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+}
+
+#desktopNav .left-nav .nav-links a:hover {
+    color: #ccc;
+}
+
+#desktopNav .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px; 
+    width: 100%;
+    border-bottom: 4px solid #ebbb53;
+    border-radius: 1px;
+    background-color: #ebbb53;
+    transform: translateX(-50%) scaleX(0); 
+    transform-origin: left; 
+    transition: transform 0.3s ease-in-out;
+}
+
+#desktopNav .nav-links a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.navanimation {
+    background: transparent !important;
+}
+
+.navanimation .search-link , .navanimation img {
+    display: none !important;
+}
+
+  
+
+/* ABOUT US STYLING GOES HERE */
+.aboutUs.home {
+    padding-top: 140px !important;
+}
+
+.aboutUs.home .myProducts {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(200px);
+}
+
+.aboutUs.home .myProducts img {
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aboutUs.home .myProducts h3 {
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+/* WHO WE ARE STYLING GOES HERE */
+.whoWeAre.home h2 {
+    font-size: 73.6px;
+    font-weight: 700;
+}
+
+.whoWeAre.home .headingYellow {
+    font-size: 50px;
+    color: rgb(237, 189, 85);
+}
+
+.whoWeAre.home p {
+    font-size: 23px;
+}
+
+.whoWeAre.home img {
+    height: 95%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* WHAT WE DO STYLING GOES HERE */
+.whatWeDo.home .rounded-image img {
+    height: 100%;
+    border-radius: 3%;
+    object-fit: cover;
+}
+
+/* .whatWeDo.home img {
+    width: 55%;
+}
+
+.whatWeDo.home h3 {
+    font-size: 12.5px;
+    font-weight: 500;
+    text-transform: uppercase;
+} */
+
+.whatWeDo .icons-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.whatWeDo .icon-item {
+    text-align: center;
+    padding: 10px;
+    flex: 0 0 18.1%; /* 5 per row */
+}
+
+.whatWeDo .icon-item img {
+    width: 80%;
+}
+
+.whatWeDo .icon-item h3 {
+    font-size: 0.781em;
+    line-height: 20px;
+}
+
+/* WHAT WE ARE STYLING GOES HERE */
+.whatWeAre {
+    height: 600px !important;
+    /* background-color: antiquewhite; */
+}
+
+/* text content styling */
+
+.whatWeAre .textContnt1 {
+    padding-top: 100px;
+    padding-right: 170px;
+    padding-left: 60px;
+}
+
+.whatWeAre .textContnt1 h2 {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.whatWeAre .textContnt1 p {
+    font-size: 1.4rem;
+}
+
+.whatWeAre .textContnt2 h2 {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.whatWeAre .textContnt2 p {
+    font-size: 24px;
+}
+
+.whatWeAre .textContnt2 h3 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.whatWeAre .textContnt2 span {
+    font-size: 24px;
+    color: rgb(240, 199, 103);
+}
+
+/* image content styling */
+.whatWeAre .imageContnt1 .image1 {
+    width: 63%;
+    height: 30%;
+    object-fit: cover;
+    border-radius: 2%;
+    position: absolute;
+    top: 6%;
+}
+
+.whatWeAre .imageContnt1 .image2 {
+    left: 40%;
+    top: 0%;
+    width: 50%;
+    border-radius: 3%;
+}
+
+.whatWeAre .imageContnt2 .image1 {
+    width: 140%;
+    height: 46%;
+    border-radius: 10px;
+    position: absolute;
+    top: -40%;
+    left: -47%;
+}
+
+.whatWeAre .imageContnt2 .image2 {
+    width: 120%;
+    height: 20%;
+    object-fit: cover;
+    top: 6%;
+    left: 30%;
+    border-radius: 10px;
+}
+
+.whatWeAre .imageContnt3 img {
+    display: block;
+}
+
+/* Wrapper to hide overflow and allow pinning */
+.whatWeAre .slider-wrapper {   
+    position: relative;
+}
+  
+  /* Container that holds all slides in one horizontal row */
+.whatWeAre .items-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+  
+  /* Each slide takes full viewport width */
+.whatWeAre .slide {
+    flex: 0 0 100vw;
+    display: flex;
+    flex-wrap: nowrap;
+}
+  
+  /* Text and image halves each take 50% width */
+.whatWeAre .textContnt,
+.whatWeAre .imageContnt {
+    flex: 0 0 50%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Center text vertically */
+.whatWeAre .textContnt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Make images responsive */
+.whatWeAre .imageContnt img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* We represent the next generation of housewares STYLING START HERE */
+.WeRepresent .headingContent {
+    padding: 150px;
+}
+
+.WeRepresent .headingContent p span {
+    font-size: 70px;
+    line-height: 85px;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: block;
+}
+
+/* Represent images */
+/* Container for all image cards */
+.representImages1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5px;
+    width: 100%;
+}
+  
+  /* Each image card */
+  .imageContainer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 300px;
+    /* Default for mobile: 2 images per row */
+    width: 19.5%;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effects for background image */
+  .imageContainer .bgImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65ce949c349e9f461436b8a6_Silicone%20%26%20Bamboo-2%20(3).jpg') center/cover no-repeat;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .imageContainer .bgImg2 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65ce9b837d0287673974244e_core-kitchen.webp') center/cover no-repeat;
+  }
+
+  .imageContainer .bgImg3 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/658089d101313c787f29b55d_BRAND%20IMAGE%20-%20Manna.jpeg') center/cover no-repeat;
+  }
+
+  .imageContainer .bgImg4 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65808bd50f4b142dd5d6e3ea_BRAND%20IMAGE%20-%20BKLYN%20STEEL%20CO.jpeg') center/cover no-repeat;
+  }
+
+  .imageContainer .bgImg5 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65808a91db39146af7b8ad81_BRAND%20IMAGE%20-%20TAL.jpeg') center/cover no-repeat;
+  }
+
+  .imageContainer .bgImg6 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65ce9ad157b9e13b220b2c28_Screen%20Shot%202024-02-15%20at%206.13.02%20PM.webp') center/cover no-repeat;
+  }
+  
+  .imageContainer .bgImg7 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/658087efbb0c2c61b425d2c3_thyme-table.jpg') center/cover no-repeat;
+  }
+
+  .imageContainer .bgImg8 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65808e88501b11ccd85aafc9_wildandwoofycovercard.webp') center/cover no-repeat;
+  }
+
+  .imageContainer .bgImg9 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65808fb7db460aeff713f4c0_arete%20and%20athene.webp') center/cover no-repeat;
+  }
+
+  .imageContainer .bgImg10 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65808fb7db460aeff713f4c0_arete%20and%20athene.webp') center/cover no-repeat;
+  }
+
+  .imageContainer .bgImg11 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/658094fcd62721c433c0ab3c_Screen%20Shot%202023-12-11%20at%205.01.55%20PM.png') center/cover no-repeat;
+  }
+  
+  .imageContainer .bgImg12 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/6580a3d26274f8391ad15aea_RR42329_02.jpg') center/cover no-repeat;
+  }
+
+  .imageContainer .bgImg13 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65d77d2153c6c771495859fc_Mayim_Lifestyle_01.jpg') center/cover no-repeat;
+  }
+
+  .imageContainer .bgImg14 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65d7859bf5fb9994684aece4_maisondebase%20-%20small%20thumbnail.jpg') center/cover no-repeat;
+  }
+
+  .imageContainer .bgImg15 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65d787adbcbec636605b21db_Bklyn%20Refinery%20Thumbnail.png') center/cover no-repeat;
+  }
+
+  .imageContainer .bgImg16 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65d78c51f38f76d2cc8f8d4e_wellanddowd-%20thumbnail%20small.jpg') center/cover no-repeat;
+  }
+  
+  .imageContainer .bgImg17 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65d77b89a4f705134a2d232c_Medici_LifeStyle_Web_019.jpg') center/cover no-repeat;
+  }
+
+  .imageContainer .bgImg18 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65d791e6707860ff6462163f_41709_02.jpg') center/cover no-repeat;
+  }
+
+  .imageContainer .bgImg19 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65d78dbc97f20f26f320be63_HBA_TFW_Lifestyle_2022_08.jpg') center/cover no-repeat;
+  }
+
+  .imageContainer .bgImg20 {
+    background: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/658091e7bad148ddb2283167_WW_Website_2022_12.jpg') center/cover no-repeat;
+  }
+  
+  /* Overlay to darken or tint the bgImg */
+  .imageContainer .bgRgba {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+  }
+  
+  /* Centered image over the background */
+  .imageContainer img {
+    position: absolute;
+    width: 180px;
+    height: 130px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  /* Button styled and centered at the bottom */
+  .imageContainer .btn {
+    position: absolute;
+    bottom: -34px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: #000 !important;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .3s ease-in-out;
+    z-index: 3;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+  
+  .imageContainer:hover .btn {
+    bottom: 10px;
+  }
+
+  .imageContainer .btn:hover {
+    background: #ebbb53;
+  }
+  
+  /* Hover effect for the background image container */
+.imageContainer:hover .bgImg {
+    transform: scale(1.1);
+    filter: blur(5px);
+}
+
+/* slider of bottom second last */
+.WeRepresent .sliderContent {
+    width: 100%;
+    overflow: hidden;
+}
+  
+.WeRepresent .innerSlider {
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Prevent content from wrapping */
+}
+  
+.WeRepresent .sliderContent .text {
+    font-weight: 600;
+    white-space: nowrap; /* Ensure each text element stays on one line */
+    margin: 0; /* Reset default margins */
+}
+  
+.WeRepresent .sliderContent .circle {
+    width: 1rem;
+    height: 1rem;
+    background: #ebbb53;
+    border-radius: 50%;
+    flex-shrink: 0; /* Prevent the circle from shrinking */
+    margin: 0 50px; /* Space between text and circle */
+}
+  
+/* collaborate With Us */
+.collaborateWithUs {
+    /* Container styles */
+    .imageCard {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Background image layer */
+    .bgImg {
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+        transition: filter 0.3s ease;
+        border-radius: 2%;
+    }
+    
+    .bgImg1 {
+        background-image: url('https://cdn.prod.website-files.com/657f6997d13b05b913955807/65945cfe69db34e10e05d2b7_Private_Label_1.webp');
+    }
+
+    .bgImg2 {
+        background-image: url('https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ce63e2d6ef8a899ee60d40_WM_Yellowstone_John-2023_27.webp');
+    }
+
+    .bgImg3 {
+        background-image: url('https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ce625f8cfcf5de8bad1fe8_giving-back.webp');
+    }
+
+    .bgImg4 {
+        background-image: url('https://cdn.prod.website-files.com/657f6997d13b05b913955807/65d8b5a711a09d255df92f19_collaborate%20with%20us.webp');
+    }
+
+    .bgImg5 {
+        background-image: url('https://cdn.prod.website-files.com/657f6997d13b05b913955807/6594669c7aae3513746e3468_nyc%20skyline.webp');
+    }
+
+    .bgImg6 {
+        background-image: url('https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ce4f8eae69db12eca9b134_CH_LIFESTYLE-35.webp');
+    }
+    
+    /* Overlay layer with rgba background */
+    .bgRgba {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Adjust opacity and color as needed */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+    
+    /* Button styles (optional customization) */
+    .bgRgba .btn {
+        visibility: hidden;
+        opacity: 0;
+        background-color: #fff;
+        color: #000 !important;
+        border: none;
+        text-transform: uppercase;
+        transform: translateY(30px);
+        transition: .3s ease-in-out;
+    }
+    
+    .bgRgba .btn:hover {
+        background-color: #ebbb53;
+    }
+    
+    /* On hover, apply blur to the background image */
+    .imageCard:hover .bgImg {
+        filter: blur(5px);
+    }
+
+    p {
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+    
+    .bgRgba1:hover .btn {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+  
+    .bgRgba2:hover .btn {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+  
+    .bgRgba3:hover .btn {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+  
+    .bgRgba4:hover .btn {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+  
+    .bgRgba5:hover .btn {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+  
+    .bgRgba6:hover .btn {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+  
+}
+
+/* BOTTOM LAST SLIDERS */
+
+.BottomLastSliders .innerSlider .imageItem {
+    position: relative;
+}
+
+.BottomLastSliders .innerSlider .imageItem img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.BottomLastSliders .innerSlider .socialIcon {
+    visibility: hidden;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-15%, -50%);
+    transition: .5s ease-out;
+}
+
+.BottomLastSliders .innerSlider .socialIcon img {
+    width: 40%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.BottomLastSliders{
+    .imageItem1:hover .socialIcon {
+        visibility: visible;
+        opacity: 1;
+        transition: .5s ease-in;
+    }
+
+    .imageItem2:hover .socialIcon {
+        visibility: visible;
+        opacity: 1;
+        transition: .5s ease-in;
+    }
+
+    .imageItem3:hover .socialIcon {
+        visibility: visible;
+        opacity: 1;
+        transition: .5s ease-in;
+    }
+
+    .imageItem4:hover .socialIcon {
+        visibility: visible;
+        opacity: 1;
+        transition: .5s ease-in;
+    }
+
+    .imageItem5:hover .socialIcon {
+        visibility: visible;
+        opacity: 1;
+        transition: .5s ease-in;
+    }
+
+    .imageItem6:hover .socialIcon {
+        visibility: visible;
+        opacity: 1;
+        transition: .5s ease-in;
+    }
+
+    .imageItem7:hover .socialIcon {
+        visibility: visible;
+        opacity: 1;
+        transition: .5s ease-in;
+    }
+
+    .imageItem8:hover .socialIcon {
+        visibility: visible;
+        opacity: 1;
+        transition: .5s ease-in;
+    }
+
+    .imageItem9:hover .socialIcon {
+        visibility: visible;
+        opacity: 1;
+        transition: .5s ease-in;
+    }
+
+    .imageItem10:hover .socialIcon {
+        visibility: visible;
+        opacity: 1;
+        transition: .5s ease-in;
+    }
+}
+
+
+
+
+/* For larger devices (using a breakpoint of 992px, adjust if needed) */
+@media (max-width: 600px) {
+    #logoSection img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .myNavigation .logo-img {
+        max-width: 60%;
+    }
+
+    .myNavigation .menu-button:hover .icons {
+        transform: rotate(-45deg);
+    }
+
+    .myNavigation .menu-button:hover {
+        .icon1 {
+            width: 8px;
+            height: 1.4px;
+        }
+
+        .icon2 {
+            width: 20px;
+            height: 1.8px;
+        }
+
+        .icon3 {
+            width: 9px;
+            height: 1.5px;
+        }
+    }
+
+    .whatWeDo.home .row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .whatWeDo .icon-item {
+        flex: 0 0 30%; /* For small devices: 3 per row */
+    }
+
+    .whatWeDo .icon-item img {
+        width: 78%;
+    }
+
+    /* REPRESENT IMAGES */
+
+    .imageContainer {
+        width: 49%;
+        height: 230px;
+    }
+
+    .representImages1 {
+        flex-wrap: wrap;
+        gap: 9px;
+    }
+
+    .imageContainer .btn {
+        font-size: 7px;
+    }
+
+    .collaborateWithUs .bgImg {
+        height: 200px;
+    }
+
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #desktopNav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #desktopNav .left-nav,
+    #desktopNav .right-nav {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #desktopNav .left-nav .nav-links {
+        margin-top: 10px;
+    }
+
+    #desktopNav .right-nav {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practive code</title>
+
+        <!-- Bootstrap 5 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- font-awesome links -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+        <!-- custom css -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+    <body class="bg-black text-white">
+        <!-- Header section -->
+        <div id="header" class="header position-fixed bg-black w-100"></div>
+
+        <section class="overflow-hidden">
+
+            <!-- logo section -->
+            <div id="logoSection" class="logoSection">
+                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65d6425e0e6f9cc3e49db4b4_CoreHomeLogo_with%20Black%20Letters-p-800.webp" alt="logo">
+            </div>
+        
+            <!-- banner section -->
+            <div class="d-flex overflow-hidden position-relative" style="height: 1400px;">
+                <!-- Slider Container 1 -->
+                <div class="slider-container">
+                    <!-- Slider 1 -->
+                    <div class="slider" id="imageSlider">
+                        <div class="bgImg1 bgImg"></div>
+                        <div class="bgImg2 bgImg"></div>
+                        <div class="bgImg3 bgImg"></div>
+                    </div>
+                </div>
+            
+                <!-- Slider Container 2 -->
+                <div class="slider-container slider-container2" id="centerSlider">
+                    <!-- Slider 2 -->
+                    <div class="slider" id="imageSlider2">
+                        <div class=" bgImg4 bgImg"></div>
+                        <div class="bgImg5 bgImg"></div>
+                        <div class="bgImg6 bgImg"></div>
+                    </div>
+                </div>
+            
+                <!-- Slider Container 3 -->
+                <div class="slider-container slider-container3 d-lg-block d-none">
+                    <!-- Slider 3 -->
+                    <div class="slider" id="imageSlider3">
+                        <div class="bgImg7 bgImg"></div>
+                        <div class="bgImg8 bgImg"></div>
+                        <div class="bgImg9 bgImg"></div>
+                    </div>
+                </div>
+
+                <!-- bottom content -->
+                <div class="sliderBottom text-center bg-black position-absolute w-100">
+                    <h2>
+                        Discover the future <br>
+                        of housewares
+                    </h2>
+                </div>
+            </div>
+        
+        </section>
+
+
+        <!-- NAVIGATION START HERE -->
+
+        <section class="container-fluid text-light px-lg-4 px-2 py-2 w-100 bg-black myNavigation">
+            <nav class="row align-items-center">
+                <!-- Left Column: Menu Button -->
+                <div class="col text-left">
+                    <button class="menu-button d-flex align-items-center gap-3 btn text-light">
+                        <div class="icons">
+                            <div class="icon1 icon"></div>
+                            <div class="icon2 icon"></div>
+                            <div class="icon3 icon"></div>
+                        </div>
+                        <span class="d-lg-block d-none">MENU</span>
+                    </button>
+                </div>
+                
+                <!-- Center Column: Logo Image -->
+                <div class="col text-center">
+                    <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65cbee72e517af5f07398f59_MicrosoftTeams-image%20(38)-p-500.webp" alt="Logo" class="logo-img">
+                </div>
+                
+                <!-- Right Column: Search Icon and Text -->
+                <div class="col">
+                    <a href="#" class="search-link d-flex justify-content-end gap-3">
+                        <span class="d-lg-block d-none">SEARCH</span> <i class="fas fa-search"></i>
+                    </a>
+                </div>
+            </nav>
+        </section>
+        
+        <!-- Container for dynamic background images -->
+        <div id="backgroundContainer">
+            <div class="background-image active" style="background-image: url('https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8=');"></div>
+            <div class="background-image" style="background-image: url('https://media.istockphoto.com/id/1403500817/photo/the-craggies-in-the-blue-ridge-mountains.jpg?s=612x612&w=0&k=20&c=N-pGA8OClRVDzRfj_9AqANnOaDS3devZWwrQNwZuDSk=');"></div>
+            <div class="background-image" style="background-image: url('https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8=');"></div>
+            <div class="background-image" style="background-image: url('https://media.istockphoto.com/id/1403500817/photo/the-craggies-in-the-blue-ridge-mountains.jpg?s=612x612&w=0&k=20&c=N-pGA8OClRVDzRfj_9AqANnOaDS3devZWwrQNwZuDSk=');"></div>
+        </div>
+        
+        <!-- Container to load desktop.html content -->
+        <div id="desktopNavContainer" class="d-none"></div>
+
+
+        <!-- NAVIGATION LINKS FOR MOBILE START HERE -->
+            
+        <section id="mobileNav"></section>
+
+            <!-- NAVIGATION LINKS FOR MOBILE START HERE -->
+
+        <!-- NAVIGATION END HERE -->
+        
+        
+        <!-- ABOUT US SECTION START HERE -->
+        <section id="about" class="container-fluid p-5 aboutUs home text-white">
+            <div class="row gx-5">
+
+                <h2>About Us</h2>
+
+                <div class="col-12 col-lg-5 pe-lg-5">
+                    <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/6594882174bcd8b906a6a280_TT1054_L_03-p-800.webp" class="w-100 rounded" alt="">
+                </div>
+                <div class="col-12 col-lg-7 ps-lg-5 pt-5 pt-lg-0">
+                    <p>
+                        Our mission is simple: to make sustainable, trend-forward products that people will love. Our guiding light in creating unique products for the home are innovation, originality, collaboration, and sustainability. Thinking outside of the box is how we stay at the forefront of design, constantly striving to bring exciting, sustainably-sourced products to market.
+                    </p>
+                    <div class="d-flex">
+                        <a href="">explore our brands</a>
+                        <a href="">learn more</a>
+                    </div>
+
+                    <div class="d-flex pt-5 myProducts">
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65b7ddf26f9e1d7d77f85633_CH_Website_Icons_2024_WH-Revolutionize_Kitchenware.webp" alt="product">
+                            <h3>Revolutionize Kitchenware</h3>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65b7ddf2261abb9003157c5f_CH_Website_Icons_2024_WH-Support_Sustainability.webp" alt="product">
+                            <h3>Support Sustainability</h3>
+                        </div>
+                    </div>
+                    <div class="d-flex pt-5 myProducts">
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65b7ddf5b76c79fa5231dddf_CH_Website_Icons_2024_WH-Capture_Ingenuity.webp" alt="product">
+                            <h3>Capture Integrity</h3>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 ps-2">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65b2cef3c44f6fb037a4ef16_CH_Website_Icons_2024_WH-Demonstrate_Commitment_To_Quality.webp" alt="product">
+                            <h3>Demonstrate Commitment to Quality</h3>
+                        </div>
+                    </div>
+                    <div class="d-flex pt-5 myProducts">
+                        <div class="d-flex align-items-center gap-3 me-4">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65b7ddf1a724398a30dc8ad6_CH_Website_Icons_2024_WH-Curate_innovativeDesign.webp" alt="product">
+                            <h3>Curate Innovative Designs</h3>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 ps-lg-5">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65b7ddf18ed4bf87c0568d10_CH_Website_Icons_2024_WH-Push_The_Boundaries_of_Aesthetic_and_Function.webp" alt="product">
+                            <h3>Push the Boundaries of Aesthetic and Function</h3>
+                        </div>
+                    </div>
+                    <div class="d-flex pt-5 myProducts">
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65b7ddf282bbe140f3a73a45_CH_Website_Icons_2024_WH-Prioritize_Collaboration.webp" alt="product">
+                            <h3>Prioritize Collaboration</h3>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 ps-lg-5">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65d6405c85ad7fb7ff918685_CH_Website_Icons_2024_WH-Capture_OpotimizeCustomerExperience.webp" alt="product">
+                            <h3>Optimize Customer Experience</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT US SECTION END HERE -->
+
+        <!-- WHO WE ARE SECTION START HERE -->
+        <section class="container-fluid p-lg-5 whoWeAre home text-white">
+            <div class="row gx-5">
+
+                <div class="col-12 col-lg-6 textcontnt">
+                    <div>
+                        <h2>Who We Are</h2>
+                        <p>
+                            A forward-thinking team of in-house product developers, designers, engineers, marketing experts, and account managers
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="headingYellow">Passion</h2>
+                        <p>
+                            We aim to foster an environment where everyone can bring their best selves and feel excited about each new day.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="headingYellow">Creativity</h2>
+                        <p>
+                            We pride ourselves on being trend-savvy and ahead of the curve when bringing unique products to the houseware market.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="headingYellow">Innovation</h2>
+                        <p>
+                            With every product, we prioritize performance alongside style and sacrifice nothing in favor of having it all. By working closely with our very own factories, we’re able to ensure only the very best arrives in your home.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ce5536efc94e7c3a5a8dd6_Core%20Home%20Team-p-1600.webp" class="w-100 mt-4" alt="images">
+                </div>
+
+        </section>
+        <!-- WHO WE ARE SECTION END HERE -->
+
+        <!-- WHAT WE DO SECTION START HERE -->
+        <section class="container-fluid text-white p-lg-5 whatWeDo home">
+            <div class="row">
+                <div class="col-12 col-lg-6 rounded-image">
+                    <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65847fa69dfbafacf243a10f_Puzzle-War-BK_Lifestyle_41.webp" class="w-100" alt="images">
+                </div>
+                <div class="col-12 col-lg-6 pt-4 pt-lg-0 sideContent">
+                    <div>
+                        <h2>What We Do</h2>
+                        <p>We combine cutting-edge technology with bold aesthetics to produce home and lifestyle essentials.</p>
+                    </div>
+                    <!-- Wrap all icon items inside one container -->
+                    <div class="icons-container">
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c51c89fa6131ab4d9c6923_CH_Website_Icons_2024_WH-Hydration.webp" alt="Hydration">
+                            <h3>HYDRATION</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c5232c0a77a50bf6e662b7_CH_Website_Icons_2024_WH-Cookware.webp" alt="Cookware">
+                            <h3>COOKWARE</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c51c890c0a134cdedb62a4_CH_Website_Icons_2024_WH-Gadgets.webp" alt="Tools & Gadgets">
+                            <h3>TOOLS & GADGETS</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c51c86977c258790423e38_CH_Website_Icons_2024_WH-FoodPrep.webp" alt="Food Prep">
+                            <h3>FOOD PREP</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c51c8606fb1e7e312abcb4_CH_Website_Icons_2024_WH-Utensils.webp" alt="Flatware">
+                            <h3>FLATWARE</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65d51f57cfc621286593c1f7_CH_Website_Icons_2024_WH-Cutlery.webp" alt="Hydration">
+                            <h3>HYDRATION</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c51c867fecf932ff9278df_CH_Website_Icons_2024_WH-LunchTo-Go.webp" alt="Cookware">
+                            <h3>COOKWARE</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c51c84d4b56b2ada152cb9_CH_Website_Icons_2024_WH-Bath.webp" alt="Tools & Gadgets">
+                            <h3>TOOLS & GADGETS</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c51c84d4b56b2ada152cb9_CH_Website_Icons_2024_WH-Bath.webp" alt="Food Prep">
+                            <h3>FOOD PREP</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c51c84977c258790423c38_CH_Website_Icons_2024_WH-Bakeware.webp" alt="Flatware">
+                            <h3>FLATWARE</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c5232b977cf47cd0dbdfed_CH_Website_Icons_2024_WH-Games.webp" alt="Hydration">
+                            <h3>HYDRATION</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c51c860d15e12e36b0d921_CH_Website_Icons_2024_WH-HomeDecor.webp" alt="Cookware">
+                            <h3>COOKWARE</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c51c84835a22c5a8427b8d_CH_Website_Icons_2024_WH-Stationery.webp" alt="Tools & Gadgets">
+                            <h3>TOOLS & GADGETS</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c51c894189366eb938c047_CH_Website_Icons_2024_WH-CleaningAccessories.webp" alt="Food Prep">
+                            <h3>FOOD PREP</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c51c89fc88caaafb99801a_CH_Website_Icons_2024_WH-FoodStorage.webp" alt="Flatware">
+                            <h3>FLATWARE</h3>
+                        </div>
+                        
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c51c86f8f03c35362d17ed_CH_Website_Icons_2024_WH-Dinnerware.webp" alt="Hydration">
+                            <h3>HYDRATION</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c51c86cda075d36eb11837_CH_Website_Icons_2024_WH-SustainableAccessoriespng.webp" alt="Cookware">
+                            <h3>COOKWARE</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65d51f57f0afe599c98207c2_CH_Website_Icons_2024_WH-KitchenElectrics.webp" alt="Tools & Gadgets">
+                            <h3>TOOLS & GADGETS</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c51c845700f7f647dd64e5_CH_Website_Icons_2024_WH-Health%26Beauty.webp" alt="Food Prep">
+                            <h3>FOOD PREP</h3>
+                        </div>
+
+                        <div class="icon-item">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c51c84d3c3f04f7a4c8aff_CH_Website_Icons_2024_WH-HomeTextiles.webp" alt="Flatware">
+                            <h3>FLATWARE</h3>
+                        </div>
+                        <!-- Additional icon items (if any) can go here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT WE DO SECTION END HERE -->
+
+        <!-- WHAT WE ARE SECTION START HERE -->
+        <section class="container-fluid p-lg-5 overflow-hidden whatWeAre">
+            <div class="slider-wrapper">
+                <div class="items-container">
+                
+                    <!-- Slide 1 -->
+                    <div class="slide">
+                        <div class="w-50 textContnt1">
+                            <h2>Where We Are</h2>
+                            <p>
+                                Find our in-house product developers, designers, engineers, marketing experts, and account managers based in NYC. We work closely with our own vertically integrated factories in China and partner factories around the world.
+                            </p>
+                        </div>
+                        <div class="position-relative w-50 imageContnt1">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c51490b20724c395af2f9a_AdobeStock_52675042-p-800.webp" class="image1" alt="Image 1">
+
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/658dad94dd2cec574407f23a_bryant-park-nyc-new-york-city-p-500.webp" class="position-absolute image2" alt="Image 2">
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <div class="w-75 textContnt2 pt-5">
+                            <h2>Support Sustainability</h2>
+                            <p>
+                                <span>Our Values</span> <br>
+                                We pride ourselves on producing quality products while staying environmentally conscious. Our team consistently strives to innovate our production methods by using recycled materials and developing tools that promote a more eco-friendly lifestyle.
+                            </p>
+                            <p>
+                                <span>What We Offer</span> <br>
+                                Our eco-friendly ranges prioritize the goals of our customers and our company with a refreshing twist on sustainability. We aim to reduce single-waste plastics and other discarded materials into entirely new and exciting tools.
+                            </p>
+                            <span>Our New Factory</span>
+                            <div class="pt-2 d-flex gap-5">
+                                <div class="">
+                                    <h3>5.4 tons</h3>
+                                    <p>
+                                        Conserves at least 5.4 tons <br>
+                                        of VOC emissions annually
+                                    </p>
+                                </div>
+                                <div class="">
+                                    <h3>98%</h3>
+                                    <p>
+                                        Purifies emitted waste gas <br>
+                                        with up to 98% efficiency
+                                    </p>
+                                </div>
+                                <div class="">
+                                    <h3>1.8 million</h3>
+                                    <p>
+                                        Generates 1.85 million kWh <br>
+                                        of electricity through solar panels
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-relative w-25 imageContnt2">
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ccf589be004c298e112276_warehouse-solarpanels.webp" class="image1" alt="Image 3">
+
+                            <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65d8bf3f2c442a0840d773ad_core-sun-factory.webp" class="position-absolute image2" alt="Image 4">
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="slide" style="margin-left: 400px;">
+                        <div class="w-50 pt-5 textContnt3">
+                            <h2>Our Materials</h2>
+                            <p>
+                                We pride ourselves on only using the highest quality, food-safe materials to ensure optimal impact on the environment and our customers.
+                            </p>
+
+                            <p class="pt-3">
+                                To find out more about <a href="">PFAs.</a>
+                            </p>
+                            <div class="pt-4">
+                                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ce29547de37801c3482a85_pair-materials-with-colors.png.webp" class="w-75 rounded" alt="">
+                            </div>
+                        </div>
+
+                        <div class="w-50 position-relative d-flex imageContnt3">
+                            <!-- First Column -->
+                            <div class="w-25 col1">
+                                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65c4f65f41d95aca7999a66f_CH_Website_Icons_2024_WH_Materials-Bamboo.webp" class="w-75 pt-5" alt="">
+                            
+                                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65e764293c3216d6e3875692_CH_Website_Icons_2024_WH-Cornstarch.webp" class="w-75 pt-5" alt="">
+                            
+                                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65e7642a54c99ce87a2f2b48_CH_Website_Icons_2024_WH-Wood(Acacia_Wood).webp" class="w-75 pt-5" alt="">
+                            
+                                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65e7642b64e8b7f93519b1ea_CH_Website_Icons_2024_WH-Wood(Ash_Wood).webp" class="w-75 pt-5" alt="">
+                            
+                                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65e7642b64e8b7f93519b1f0_CH_Website_Icons_2024_WH-Wood(Maple_Wood).webp" class="w-75 pt-5" alt="">
+                            </div>
+                            <!-- Second Column -->
+                            <div class="w-25 col2">
+                                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65e7642a54c99ce87a2f2b48_CH_Website_Icons_2024_WH-Wood(Acacia_Wood).webp" class="w-75 pt-5" alt="">
+                                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65e7642a0ab237b0e01ee8ee_CH_Website_Icons_2024_WH-Wheat_Starch_Fiber.webp" class="w-75 pt-5" alt="">
+                                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65e76429c04e9c3fc28695b0_CH_Website_Icons_2024_WH-Recycled_Stainless_Steel-p-500.png" class="w-75 pt-5" alt="">
+                                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65e764293c3216d6e3875692_CH_Website_Icons_2024_WH-Cornstarch.webp" class="w-75 pt-5" alt="">
+                                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65e7642862bedfc34932fef5_CH_Website_Icons_2024_WH-Ocean-Bound_Plastic.webp" class="w-75 pt-5" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+        
+                </div>
+            </div>
+        </section>   
+
+        <!-- WHAT WE ARE SECTION END HERE -->
+
+        <!-- We represent the next generation of housewares SECTION START HERE -->
+        <section class="container-fluid WeRepresent">
+            <div class="headingContent text-center">
+                <p>
+                    <span>We represent the next</span>
+                    <span>generation of housewares,</span>
+                    <span>with an extensive portfolio</span>
+                    <span>of in-house brands</span>
+                    <span>To Explore</span>
+                </p>
+            </div>
+            
+            <!-- represent images -->
+            <div class="representImages1 overflow-hidden" id="representImages1">
+                <!-- Repeat this block for each image card -->
+                <div class="imageContainer">
+                    <div class="bgImg"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65ce89b2d01801508f128daa_core_bamboo_logo-p-500.png" alt="Image 1">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+                
+                <div class="imageContainer">
+                    <div class="bgImg bgImg2"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65ce8971a20e415d279a1e28_CK_Logo_White.png" alt="Image 2">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+                
+                <div class="imageContainer">
+                    <div class="bgImg bgImg3"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/658089e80e6c2805880d48d9_manna-logo-white-p-500.png" alt="Image 3">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+                
+                <div class="imageContainer">
+                    <div class="bgImg bgImg4"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65808bcada55834c34b8f762_Brooklyn_Steel_Logo_white_with_shadow-p-800.png" alt="Image 4">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+                
+                <div class="imageContainer">
+                    <div class="bgImg bgImg5"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65808a887541e67f0cd56914_Tal_Logo_white-p-500.png" style="width: 90px; height: 130px;"  alt="Image 5">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+
+                <div class="imageContainer">
+                    <div class="bgImg bgImg6"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65ce9413c4a23ef6f61f3ccc_HydraGear_Logo_White_20-01%20copy-p-500.png" style="height: 70px;" alt="Image 1">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+                
+                <div class="imageContainer">
+                    <div class="bgImg bgImg7"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/6580880541e12efe31006c3f_Thyme%26Table%20Logo_white_with_shadow-p-500.png" alt="Image 2">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+                
+                <div class="imageContainer">
+                    <div class="bgImg bgImg8"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65808e775ee2b5d246c78e94_Wild_Woofy_Logo-01_White_with_shadow.png" alt="Image 3">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+                
+                <div class="imageContainer">
+                    <div class="bgImg bgImg9"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65808fa25a248bad8fe42cfe_Arete%26Athene_Logo_white_with_shadow-p-500.png" alt="Image 4">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+                
+                <div class="imageContainer">
+                    <div class="bgImg bgImg10"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65808d2081062aa51e49b7cd_Yellow_Cab_Games_Logo_white_with_shadow-p-500.png" style="width: 160px; height: 160px;"  alt="Image 5">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+
+                <div class="imageContainer">
+                    <div class="bgImg bgImg11"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65f11503195907eba19b437d_sweet_sugar_Logo_TM-p-500.webp" alt="Image 1">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+                
+                <div class="imageContainer">
+                    <div class="bgImg bgImg12"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/6580a5368bd954da4cba9499_RoamandRepeat_Logo_White_Shadow-p-500.png" alt="Image 2">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+                
+                <div class="imageContainer">
+                    <div class="bgImg bgImg13"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65f114f5b51c3fd39e02daee_Mayim_Logo_TM.webp" alt="Image 3">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+                
+                <div class="imageContainer">
+                    <div class="bgImg bgImg14"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65ce8dd6c4a23ef6f61b8fd6_Maison_de_Base_Logo_white-01-p-500.png" style="width: 200px; height: auto;" alt="Image 4">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+                
+                <div class="imageContainer">
+                    <div class="bgImg bgImg15"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65ce8df96730ed06a5e540e9_Brooklyn_Refinery_Logo-01-p-500.webp" style="width: 170px; height: 70px;"  alt="Image 5">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+
+                <div class="imageContainer">
+                    <div class="bgImg bgImg16"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65ce90ad1f71d3ae25c2faa1_HBA_Well%26Dowd_Logo_LA_white-p-500.webp" alt="Image 1">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+                
+                <div class="imageContainer">
+                    <div class="bgImg bgImg17"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65f11548a12d5be1d7d5f702_Medici_Logo_TM.webp" alt="Image 2">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+                
+                <div class="imageContainer">
+                    <div class="bgImg bgImg18"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65ce92edd545b5430252870b_Scribble%26Scribe_Logo.webp" alt="Image 3">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+                
+                <div class="imageContainer">
+                    <div class="bgImg bgImg19"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65ce938566e9f84e644eaab5_TFW_logo_white-p-500.webp" alt="Image 4">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+                
+                <div class="imageContainer">
+                    <div class="bgImg bgImg20"></div>
+                    <div class="bgRgba"></div>
+                    <img src="https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65f11524bc53862a5173a0a2_W%2BW_Logo_TM.webp" style="width: 140px; height: auto;"  alt="Image 5">
+                    <a href="#" class="btn">Explore Brand</a>
+                </div>
+
+            </div>
+            
+            <div class="WeRepresent pt-5">
+                <div class="sliderContent" id="sliderContent">
+                <div class="innerSlider" id="innerSlider">
+                    <div class="text">COOKWARE</div>
+                    <div class="circle"></div>
+                    <div class="text">FOOD STORAGE</div>
+                    <div class="circle"></div>
+                    <div class="text">TOOLS & GADGETS</div>
+                    <div class="circle"></div>
+                    <div class="text">LUNCH -TO-GO</div>
+                    <div class="circle"></div>
+                    <div class="text">CUTLERY</div>
+                    <div class="circle"></div>
+                    <div class="text">DINNERWARE & SERVEWARE</div>
+                    <div class="circle"></div>
+                    <div class="text">BATH</div>
+                </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- We represent the next generation of housewares SECTION END HERE -->
+
+        <!-- COLLABORATE WITH US START HERE -->
+        <section class="container-fluid pt-5 collaborateWithUs home px-0">
+            <div class="row px-0">
+                <div class="col-6 col-lg-4 text-center imageCard">
+                    <div class="bgImg bgImg1"></div>
+                    <div class="bgRgba bgRgba1">
+                        <p>privet label</p>
+                        <a href="#" class="btn px-4 py-2">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4 text-center px-0 imageCard">
+                    <div class="bgImg bgImg2"></div>
+                    <div class="bgRgba bgRgba2">
+                    <p>licensing</p>
+                    <a href="#" class="btn px-4 py-2">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-4 pt-3 pt-lg-0 text-center imageCard">
+                    <div class="bgImg bgImg3"></div>
+                    <div class="bgRgba bgRgba3">
+                        <p>giving back</p>
+                        <a href="#" class="btn px-4 py-2">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-12 text-center px-0 py-3 imageCard">
+                    <div class="bgImg bgImg4"></div>
+                    <div class="bgRgba bgRgba4">
+                        <p>collaborate With us</p>
+                        <a href="#" class="btn px-4 py-2">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-6 text-center imageCard">
+                    <div class="bgImg bgImg5"></div>
+                    <div class="bgRgba bgRgba5">
+                        <p>career</p>
+                        <a href="#" class="btn px-4 py-2">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-6 text-center px-0 imageCard">
+                    <div class="bgImg bgImg6"></div>
+                    <div class="bgRgba bgRgba6">
+                    <p>innovation</p>
+                    <a href="#" class="btn px-4 py-2">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- COLLABORATE WITH US END HERE -->
+
+        <!-- BOTTOM LAST SLIDER START HERE -->
+        <section class="pt-4 BottomLastSliders">
+            <div class="d-flex gap-1 innerSlider">
+
+                <!-- IMAGE ITEM 1 -->
+                <div class="imageItem imageItem1">
+                    <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/663a5d64c20e797a55feda4a_Core_Home_IG_Carousel_Image_6-p-1080.webp" alt="images">
+
+                    <!-- SOCIAL ICON -->
+                    <div class="position-absolute socialIcon">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8lv-iEOWtRxGDqsOR-Pa1kIiqN298569zVA&s" alt="">
+                    </div>
+                </div>
+
+                <!-- IMAGE ITEM 2 -->
+                <div class="imageItem imageItem2">
+                    <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/663a5d64306e49e08bd5b515_Core_Home_IG_Carousel_Image_4-p-1080.webp" alt="images">
+
+                    <!-- SOCIAL ICON -->
+                    <div class="position-absolute socialIcon">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8lv-iEOWtRxGDqsOR-Pa1kIiqN298569zVA&s" alt="">
+                    </div>
+                </div>
+
+                <!-- IMAGE ITEM 3 -->
+                <div class="imageItem imageItem3">
+                    <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/663a5d64e3fbad7359239791_Core_Home_IG_Carousel_Image_5-p-1080.webp" alt="images">
+
+                    <!-- SOCIAL ICON -->
+                    <div class="position-absolute socialIcon">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8lv-iEOWtRxGDqsOR-Pa1kIiqN298569zVA&s" alt="">
+                    </div>
+                </div>
+
+                <!-- IMAGE ITEM 4 -->
+                <div class="imageItem imageItem4">
+                    <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/663a5d645b7fa813eb02a29f_Core_Home_IG_Carousel_Image_2-p-1080.webp" alt="images">
+
+                    <!-- SOCIAL ICON -->
+                    <div class="position-absolute socialIcon">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8lv-iEOWtRxGDqsOR-Pa1kIiqN298569zVA&s" alt="">
+                    </div>
+                </div>
+
+                <!-- IMAGE ITEM 5 -->
+                <div class="imageItem imageItem5">
+                    <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65847fa79f9db6b72d4cfa4b_Wild_and_Woofy_2022_17-p-1080.webp" alt="images">
+
+                    <!-- SOCIAL ICON -->
+                    <div class="position-absolute socialIcon">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8lv-iEOWtRxGDqsOR-Pa1kIiqN298569zVA&s" alt="">
+                    </div>
+                </div>
+
+                <!-- IMAGE ITEM 6 -->
+                <div class="imageItem imageItem6">
+                    <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/663a5d64ec295f8737a861d8_Core_Home_IG_Carousel_Image_3-p-1080.webp" alt="images">
+
+                    <!-- SOCIAL ICON -->
+                    <div class="position-absolute socialIcon">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8lv-iEOWtRxGDqsOR-Pa1kIiqN298569zVA&s" alt="">
+                    </div>
+                </div>
+
+                <!-- IMAGE ITEM 7 -->
+                <div class="imageItem imageItem7">
+                    <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65847fa6914b6b4f554c7c0c_46197_Crazy-Travel-Stories_Lifestyle_31-p-1080.webp" alt="images">
+
+                    <!-- SOCIAL ICON -->
+                    <div class="position-absolute socialIcon">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8lv-iEOWtRxGDqsOR-Pa1kIiqN298569zVA&s" alt="">
+                    </div>
+                </div>
+
+                <!-- IMAGE ITEM 8 -->
+                <div class="imageItem imageItem8">
+                    <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/663a5d646cf751ca610e40a9_Core_Home_IG_Carousel_Image_8-p-1080.webp" alt="images">
+
+                    <!-- SOCIAL ICON -->
+                    <div class="position-absolute socialIcon">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8lv-iEOWtRxGDqsOR-Pa1kIiqN298569zVA&s" alt="">
+                    </div>
+                </div>
+
+                <!-- IMAGE ITEM 9 -->
+                <div class="imageItem imageItem9">
+                    <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65847fac218d61fe718103ed_TT0165_L_01-p-1080.webp" alt="images">
+
+                    <!-- SOCIAL ICON -->
+                    <div class="position-absolute socialIcon">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8lv-iEOWtRxGDqsOR-Pa1kIiqN298569zVA&s" alt="">
+                    </div>
+                </div>
+
+                <!-- IMAGE ITEM 10 -->
+                <div class="imageItem imageItem10">
+                    <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65847fa80744fe41ceb0cdf0_WM_Yellowstone_John-2023_28-p-1080.webp" alt="images">
+
+                    <!-- SOCIAL ICON -->
+                    <div class="position-absolute socialIcon">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8lv-iEOWtRxGDqsOR-Pa1kIiqN298569zVA&s" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- BOTTOM LAST SLIDER END HERE -->
+        
+        
+
+
+
+
+    <!-- GSAP & jQuery & font-awesome links -->
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- GSAP Core Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- GSAP Draggable Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+
+    <!-- GSAP SCROLL TRIGGER -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- GSAP MotionPath Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+
+    <!-- gsap InertiaPlugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/InertiaPlugin.min.js"></script>
+
+
+
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Font-Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- custom js -->
+    <script src="assets/javascript/script.js" defer></script>
+
+    </body>
+</html>
