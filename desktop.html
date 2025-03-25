@@ -27,13 +27,33 @@
                     <span>MENU</span>
                 </div>
                 <ul class="nav-links list-unstyled">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Our Brands</a></li>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Collaboration</a></li>
-                    <li><a href="#">Innovation</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#aboutUsModal">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#ourBrandsModal">
+                            Our Brands
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#resourcesModal">
+                            Resources
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#collaborationModal">Collaboration</a>
+                    </li>
+                    <li>
+                        <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#innovationModal">Innovation</a>
+                    </li>
+                    <li>
+                        <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
+                    </li>
                 </ul>
             </div>
         
@@ -47,7 +67,132 @@
             </div>
         </section>
         
-        
+        <!-- ABOUT US MODAL -->
+        <section id="modals">
+            <div class="modal fade" id="aboutUsModal" tabindex="-1" aria-labelledby="aboutUsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                    <div class="modal-content bg-black">
+                        <div class="modal-header border-bottom-0">
+                            <h5 class="modal-title pt-4" id="aboutUsModalLabel">Two Brothers, One Vision</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body px-5">
+                            <div class="d-lg-flex d-block gap-5">
+                                <p class="text-center px-4">
+                                    “Core Home is a brand that evolves with the changing needs of our consumers. Our goal has been to revolutionize the housewares industry through the incorporation of aesthetics and sustainability. We were founded on a commitment to bring unique, top-quality products to the housewares market; it's a commitment we are reminded of daily, and constantly try to demonstrate through ingenuity in our products.”
+                                    <span class="d-block pt-4">- Alan, President</span>
+                                </p>
+                                <p class="text-center">
+                                    “Core Home is the manifestation of a journey we began in 2009 to curate fashionable and eco-friendly bamboo kitchenware. Since the success of our first initiative, we have grown immensely. We’ve added so many elements to our breadth of products including cookware, hydration, and unique everyday home accessories. Dedication, humility, and adaptability are what have allowed us to remain at the forefront of sustainability and design, fostering our endless innovation.”
+                                    <span class="d-block pt-4">- Steven, CEO</span>
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    In 2009, young entrepreneurs Alan and Steven were inspired to create sustainable and fashionable bamboo kitchenware that would be accessible to everyone and Core Home was born. Since then, we have grown tremendously, making a name for ourselves in the housewares and kitchenware industries through a myriad of in-house brands including Core Kitchen, Brooklyn Steel Co., and Manna Hydration.
+                                </p>
+                                <p>
+                                    Founded on family values, Core Home prides itself on running our operations like an old-school small business, where employees at all levels can express their needs and are taken care of like they are family. We take these values into the 21st century, emphasizing diversity and empowerment. A family looks out for their own regardless of differences and at Core Home, these differences are celebrated. Our team proudly represents people of all genders, races, religions, and sexualities. Built by family, our company is continuously striving to be more inclusive, accommodating, and welcoming just as our parents taught us to treat people. We aim to give our team members everything they need to succeed and provide for themselves and their own families.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- OUR BRANDS MODAL -->
+            <div class="modal fade" id="ourBrandsModal" tabindex="-1" aria-labelledby="ourBrandsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                    <div class="modal-content bg-black">
+                        <div class="modal-header border-bottom-0">
+                            <h5 class="modal-title pt-4 display-5" id="aboutUsModalLabel">Private Labeling</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="">
+                                <p>
+                                    Here at Core Home, we are no stranger to the art of producing private label. After all, approximately 40% of our business comes from collaboration and production with our private label partners. 
+                                </p>
+                                <p class="py-4">
+                                    Our partners have access to our internal state-of-the-art modeling technology, 3D printers, and our in-house engineers to custom render products and planograms. Trusted by some of the most influential international companies, our private label partners continue to place their confidence in our expertise and transparency.
+                                </p>
+                                <p>
+                                    Our approach to testing and adherence to mandated regulations ensures our products meet internal and external standards and specifications. As experts in manufacturing, we have the know-how and resources to bring any private label ventures to life.
+                                </p>
+                            </div>
+                            <div class="d-lg-flex d-block gap-3 pt-5">
+                                <div class="w-50">
+                                    <p>To learn more about private label opportunities, please email:</p>
+                                    <a href="">Sales@corehome.com</a>
+                                </div>
+                                <div class="w-50">
+                                    <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65945cfe69db34e10e05d2b7_Private_Label_1.webp" class="w-100" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resources MODAL -->
+            <div class="modal fade" id="resourcesModal" tabindex="-1" aria-labelledby="resourcesModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                    <div class="modal-content bg-black">
+                        <div class="modal-header border-bottom-0">
+                            <h5 class="modal-title pt-4 display-5 ps-4" id="aboutUsModalLabel">Careers</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="px-3 pb-4">
+                                <p class="text-center">
+                                    Core Home is an Equal Opportunity Employer with a zero tolerance policy for discrimination on the basis of age, disability, sex, race, religion or belief, gender reassignment, marriage/civil partnership, pregnancy/maternity, or sexual orientation.
+                                </p>
+                                <p class="text-center">
+                                    We commit ourselves to creating an inclusive and diverse environment where people of all backgrounds are welcome to express themselves and contribute their unique perspectives. In all spheres of operation, including hiring, we strive to acknowledge and move beyond our own biases so our company can promote equity-based decisions. We hire, employ, train, promote, and compensate individuals based on merit and performance-related qualifications. All are welcome to apply. 
+                                </p>
+                                <a href="#" class="d-block w-100 text-center btn btn-light text-dark">JOIN THE TEAM</a>
+                            </div>
+                            <div class="d-lg-flex d-block justify-content-center pb-5">
+                                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ce4f8eae69db12eca9b134_CH_LIFESTYLE-35.webp" alt="img">
+                                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ce4f8e57e11edd123d37fe_CH_LIFESTYLE-26.webp" alt="img">
+                                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ce550f87e06cc5d65db437_Core%20Home%20Team.webp" class="d-none d-lg-block" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collaboration MODAL -->
+            <div class="modal fade" id="collaborationModal" tabindex="-1" aria-labelledby="collaborationModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                    <div class="modal-content bg-black">
+                        <div class="modal-header border-bottom-0">
+                            <h5 class="modal-title text-center w-100" id="collaborationModalLabel">Collaborate with us</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body px-5">
+                            <div class="d-lg-flex justify-content-center d-block gap-5">
+                                <p class="text-center display-6">
+                                    Are You a Content Creator Who Loves Our <br> Products?
+                                </p>
+                            </div>
+                            <div class="paraDiv">
+                                <p class="text-center">
+                                    We’re always looking for enthusiastic, creative collaborators to bring our range of items to life on social media. Whether you’re an avid home cook or baker, outdoor adventurer, or face mask enthusiast, Core Home has something for everyone.
+                                </p>
+                            </div>
+                            <a href="#" class="d-block w-100 text-center btn btn-light text-black">
+                                Contact our marketing team to get things started
+                            </a>
+                            <div class="d-flex pt-4">
+                                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65d8b4e5a90f0890d9a791c0_manna-influencer.webp" alt="img">
+                                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65d8b4e6138f09b2df10bcff_bklynsteel-influencer.webp" alt="img">
+                                <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65d8b4e5c16ddc9e494ffbae_tal-influencer.webp" class="w-25 d-none d-lg-block" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         
         
         

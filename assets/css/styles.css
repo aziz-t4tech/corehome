@@ -131,7 +131,7 @@ a {
 /* navigation menu styling start here */
 .myNavigation {
     position: relative;
-    z-index: 9999;
+    z-index: 1050;
     top: 0;
     transition: 2s ease-in .5s ease-out;
 }
@@ -1027,8 +1027,77 @@ a {
     }
 }
 
+#modals {
+    z-index: 1051;
+}
+
+#aboutUsModal h5 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+#aboutUsModal .modal-body p {
+    font-size: 1.2rem;
+}
+
+#ourBrandsModal .modal-header h5 {
+    font-weight: 600;
+}
+
+#ourBrandsModal .modal-body p {
+    font-size: 1.4rem;
+}
+
+#resourcesModal .modal-body p {
+    font-size: 1.5rem;
+}
+
+#resourcesModal .modal-body img {
+    width: 18rem;
+}
+
+#resourcesModal .modal-body .btn {
+    outline: none;
+    border: none;
+    padding: 13px 0;
+}
+
+#resourcesModal .modal-body .btn:hover {
+    background: linear-gradient(to right, #ebbb53, #ffdd94) !important;
+}
+
+#collaborationModal .paraDiv {
+    padding: 0 40px;
+}
+
+#collaborationModal .paraDiv p {
+    font-size: 1.34rem;
+}
+
+#collaborationModal .btn {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    border: none;
+}
+
+#collaborationModal .btn:hover {
+    background: linear-gradient(to right, #ebbb53, #ffdd94);
+}
+
+#collaborationModal .modal-body img {
+    width: 18.4rem !important;
+}
 
 
+/* Responsive Styles */
+@media (min-width: 1200px) {
+    .modal-xl {
+        --bs-modal-width: 1000px;
+        padding-top: 30px;
+    }
+}
 
 /* For larger devices (using a breakpoint of 992px, adjust if needed) */
 @media (max-width: 600px) {
@@ -1125,9 +1194,18 @@ a {
         margin-top: 20px;
     }
 
+    #resourcesModal .modal-body img {
+        width: 12rem;
+    }
+
+    #resourcesModal .modal-body p {
+        font-size: 1.2rem;
+        text-align: left !important;
+    }
+
 }
 
-/* Responsive Styles */
+
 @media (max-width: 400px) {
     /* We represent the next generation of housewares STYLING START HERE */
     .WeRepresent .headingContent {

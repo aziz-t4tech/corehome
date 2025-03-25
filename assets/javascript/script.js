@@ -456,3 +456,13 @@ gsap.to(".BottomLastSliders .innerSlider", {
   repeat: -1,
   yoyo: true
 });
+
+// Desktop.html CODE START HERE
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".modal-link").forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // ✅ Prevent Page Scroll Issue
+        });
+    });
+});
+
