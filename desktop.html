@@ -31,19 +31,82 @@
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#aboutUsModal">
+                        <a class="" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                             About Us
+                            <i class="fa-solid fa-chevron-down"></i>
                         </a>
+
+                        <div class="collapse" id="collapseExample">
+                            <ul class="list-unstyled bg-black p-3 rounded-bottom rounded-end">
+                                <li>
+                                    <a href="/#about">
+                                        About Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#Leadership">
+                                        Leadership
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#Supporting">
+                                        Supporting Sustainability
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#aboutUsModal">
+                                        News & Press
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
-                        <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#ourBrandsModal">
+                        <a class="" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
                             Our Brands
+                            <i class="fa-solid fa-chevron-down"></i>
                         </a>
+
+                        <div class="collapse" id="collapseExample2">
+                            <ul class="list-unstyled bg-black p-3 rounded-bottom rounded-end">
+                                <li>
+                                    <a href="#">
+                                        Our Brands
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#PrivateLabeling">
+                                        Private Labeling
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#Licensing">
+                                        Licensing
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
-                        <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#resourcesModal">
+                        <a class="" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">
                             Resources
+                            <i class="fa-solid fa-chevron-down"></i>
                         </a>
+
+                        <div class="collapse" id="collapseExample3">
+                            <ul class="list-unstyled bg-black p-3 rounded-bottom rounded-end">
+                                <li>
+                                    <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#Careers">
+                                        Careers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        PFAs
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
                         <a href="#" class="modal-link" data-bs-toggle="modal" data-bs-target="#collaborationModal">Collaboration</a>
@@ -69,7 +132,7 @@
         
         <!-- ABOUT US MODAL -->
         <section id="modals">
-            <div class="modal fade" id="aboutUsModal" tabindex="-1" aria-labelledby="aboutUsModalLabel" aria-hidden="true">
+            <div class="modal fade" id="Leadership" tabindex="-1" aria-labelledby="aboutUsModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-xl modal-dialog-scrollable">
                     <div class="modal-content bg-black">
                         <div class="modal-header border-bottom-0">
@@ -99,9 +162,48 @@
                     </div>
                 </div>
             </div>
+
+            <div class="modal fade" id="Supporting" tabindex="-1" aria-labelledby="aboutUsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                    <div class="modal-content bg-black">
+                        <div class="modal-header border-bottom-0">
+                            <h5 class="modal-title pt-4" id="aboutUsModalLabel">Support Sustainability</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body px-5">
+                            <div class="content-1">
+                                <h3>Our Values</h3>
+                                <p>
+                                    We pride ourselves on producing quality products while staying environmentally conscious. Our team consistently strives to innovate our production methods by using recycled materials and developing tools that promote a more eco-friendly lifestyle.
+                                </p>
+                            </div>
+                            <div class="content-2">
+                                <h3>What We Offer</h3>
+                                <p>
+                                    Our eco-friendly ranges prioritize the goals of our customers and our company with a refreshing twist on sustainability. We aim to reduce single-waste plastics and other discarded materials into entirely new and exciting tools.
+                                </p>
+                            </div>
+                            <div class="content-3">
+                                <h3>Our New Factory</h3>
+                                <p>Conserves at least 5.4 tons of VOC emissions annually</p>
+                                <p class="py-lg-2">Purifies emitted waste gas with up to 98% efficiency</p>
+                                <p>Generates 1.85 million kWh of electricity through solar panels</p>
+                            </div>
+                            <div class="d-flex justify-content-center gap-1 imagesDiv">
+                                <div class="imageDiv imageDiv-1">
+                                    <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65d8bf3f2c442a0840d773ad_core-sun-factory.webp" alt="image">
+                                </div>
+                                <div class="imageDiv imageDiv-2">
+                                    <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ccf589be004c298e112276_warehouse-solarpanels.webp" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <!-- OUR BRANDS MODAL -->
-            <div class="modal fade" id="ourBrandsModal" tabindex="-1" aria-labelledby="ourBrandsModalLabel" aria-hidden="true">
+            <div class="modal fade" id="PrivateLabeling" tabindex="-1" aria-labelledby="ourBrandsModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-xl modal-dialog-scrollable">
                     <div class="modal-content bg-black">
                         <div class="modal-header border-bottom-0">
@@ -109,18 +211,18 @@
                             <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="">
-                                <p>
+                            <div class="content-1">
+                                <p class="para-1">
                                     Here at Core Home, we are no stranger to the art of producing private label. After all, approximately 40% of our business comes from collaboration and production with our private label partners. 
                                 </p>
-                                <p class="py-4">
+                                <p class="py-4 para-2">
                                     Our partners have access to our internal state-of-the-art modeling technology, 3D printers, and our in-house engineers to custom render products and planograms. Trusted by some of the most influential international companies, our private label partners continue to place their confidence in our expertise and transparency.
                                 </p>
-                                <p>
+                                <p class="para-3">
                                     Our approach to testing and adherence to mandated regulations ensures our products meet internal and external standards and specifications. As experts in manufacturing, we have the know-how and resources to bring any private label ventures to life.
                                 </p>
                             </div>
-                            <div class="d-lg-flex d-block gap-3 pt-5">
+                            <div class="d-lg-flex d-block gap-3 pt-5 content-2">
                                 <div class="w-50">
                                     <p>To learn more about private label opportunities, please email:</p>
                                     <a href="">Sales@corehome.com</a>
@@ -134,8 +236,48 @@
                 </div>
             </div>
 
+            <div class="modal fade" id="Licensing" tabindex="-1" aria-labelledby="ourBrandsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                    <div class="modal-content bg-black">
+                        <div class="modal-header border-bottom-0">
+                            <h5 class="modal-title pt-4 display-5" id="aboutUsModalLabel">Licensing</h5>
+                            <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-block d-lg-flex justify-content-center flex-row gap-2">
+                                <div class="w-lg-50 w-100 content-1">
+                                    <p>
+                                        Our collaborations with well-loved IP are a major part of our output. From the hottest TV series to celebrity chefs and more, we pride ourselves on innovating unique licensed products in any category imaginable.
+                                    </p>
+                                    <div>
+                                        <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65847fa80744fe41ceb0cdf0_WM_Yellowstone_John-2023_28.webp" class="w-100" alt="image">
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-wrap justify-content-center w-lg-50 w-100 images">
+                                    <div class="w-50 p-3 p-lg-4 imagediv imagediv-1">
+                                        <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ce5f0c3437f81ff0bedc7c_MicrosoftTeams-image%20(23)-p-2000.png" class="w-100" alt="image">
+                                    </div>
+                                    <div class="w-50 p-3 p-lg-3 imagediv imagediv-2">
+                                        <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ce5f0b3480965bf7cea953_MicrosoftTeams-image%20(27).webp" class="w-100" alt="image">
+                                    </div>
+                                    <div class="w-50 p-3 pb-lg-4 imagediv imagediv-3">
+                                        <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ce5f0c636f7c72781cbec7_MicrosoftTeams-image%20(25).webp" class="w-100 mt-lg-5 mt-5" alt="image">
+                                    </div>
+                                    <div class="w-50 p-3 p-lg-4 imagediv imagediv-4">
+                                        <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ce5f0ced2dace4c9f7b045_MicrosoftTeams-image%20(26).webp" class="w-100" alt="image">
+                                    </div>
+                                    <div class="w-50 p-3 p-lg-5 imagediv imagediv-5">
+                                        <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ce5f0c2bce4a0b009cad67_MicrosoftTeams-image%20(24).webp" class="w-100" alt="image">
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Resources MODAL -->
-            <div class="modal fade" id="resourcesModal" tabindex="-1" aria-labelledby="resourcesModalLabel" aria-hidden="true">
+            <div class="modal fade" id="Careers" tabindex="-1" aria-labelledby="resourcesModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-xl modal-dialog-scrollable">
                     <div class="modal-content bg-black">
                         <div class="modal-header border-bottom-0">
@@ -143,16 +285,16 @@
                             <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="px-3 pb-4">
-                                <p class="text-center">
+                            <div class="px-3 pb-4 content-1">
+                                <p class="text-center para1">
                                     Core Home is an Equal Opportunity Employer with a zero tolerance policy for discrimination on the basis of age, disability, sex, race, religion or belief, gender reassignment, marriage/civil partnership, pregnancy/maternity, or sexual orientation.
                                 </p>
-                                <p class="text-center">
+                                <p class="text-center para2">
                                     We commit ourselves to creating an inclusive and diverse environment where people of all backgrounds are welcome to express themselves and contribute their unique perspectives. In all spheres of operation, including hiring, we strive to acknowledge and move beyond our own biases so our company can promote equity-based decisions. We hire, employ, train, promote, and compensate individuals based on merit and performance-related qualifications. All are welcome to apply. 
                                 </p>
                                 <a href="#" class="d-block w-100 text-center btn btn-light text-dark">JOIN THE TEAM</a>
                             </div>
-                            <div class="d-lg-flex d-block justify-content-center pb-5">
+                            <div class="d-lg-flex d-block justify-content-center pb-5 imagesDiv">
                                 <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ce4f8eae69db12eca9b134_CH_LIFESTYLE-35.webp" alt="img">
                                 <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ce4f8e57e11edd123d37fe_CH_LIFESTYLE-26.webp" alt="img">
                                 <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ce550f87e06cc5d65db437_Core%20Home%20Team.webp" class="d-none d-lg-block" alt="img">
@@ -171,7 +313,7 @@
                             <button type="button" class="btn-close bg-warning" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body px-5">
-                            <div class="d-lg-flex justify-content-center d-block gap-5">
+                            <div class="d-lg-flex justify-content-center d-block gap-5 paraDiv-1">
                                 <p class="text-center display-6">
                                     Are You a Content Creator Who Loves Our <br> Products?
                                 </p>
@@ -184,7 +326,7 @@
                             <a href="#" class="d-block w-100 text-center btn btn-light text-black">
                                 Contact our marketing team to get things started
                             </a>
-                            <div class="d-flex pt-4">
+                            <div class="d-flex pt-4 imagesDiv">
                                 <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65d8b4e5a90f0890d9a791c0_manna-influencer.webp" alt="img">
                                 <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65d8b4e6138f09b2df10bcff_bklynsteel-influencer.webp" alt="img">
                                 <img src="https://cdn.prod.website-files.com/657f6997d13b05b913955807/65d8b4e5c16ddc9e494ffbae_tal-influencer.webp" class="w-25 d-none d-lg-block" alt="img">

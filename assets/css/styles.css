@@ -373,7 +373,7 @@ a {
 #desktopNav .left-nav .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.75em;
     transition: color 0.3s ease-in-out;
     cursor: pointer;
     position: relative;
@@ -431,6 +431,35 @@ a {
 .aboutUs.home .myProducts h3 {
     font-size: 16px;
     padding-top: 10px;
+}
+
+#about .link-1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+    font-weight: 600;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+#about .link-1:hover {
+    background: linear-gradient(to right, #ebbb53, #ffdd94);
+    color: #000;
+}
+
+#about .link-1:hover {
+    background: linear-gradient(to right, #ebbb53, #ffdd94);
+    color: #000;
+}
+
+#about .link-2 {
+    border: #ebbb53 1px solid;
+    color: #000;
+}
+
+#about .link-2:hover {
+    background-color: #fff;
+    color: #000 !important;
 }
 
 /* WHO WE ARE STYLING GOES HERE */
@@ -1090,6 +1119,24 @@ a {
     width: 18.4rem !important;
 }
 
+/* DESKTOP NAVIGATION LINKS DROP-DOWN LIST STYLING */
+#desktopNav .left-nav .nav-links a svg {
+    font-size: 0.99em;
+    margin-right: 10px;
+}
+
+#collapseExample a, #collapseExample2 a, #collapseExample3 a {
+    font-size: 1.3em !important;
+}
+
+#collapseExample a:hover, #collapseExample2 a:hover, #collapseExample3 a:hover {
+    color: #ebbb53 !important;
+}
+
+#collapseExample a:hover::after, #collapseExample2 a:hover::after, #collapseExample3 a:hover::after {
+    color: #ebbb53 !important;
+    transform: translateX(-50%) scaleX(0) !important;
+}
 
 /* Responsive Styles */
 @media (min-width: 1200px) {

@@ -237,10 +237,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     // GSAP Animations for Navigation Links
                     gsap.from("#desktopNav .left-nav .nav-links li", {
                         opacity: 0,
-                        x: -50,
-                        stagger: 0.2,
-                        duration: 0.5,
-                        delay: 0.3,
+                        x: 100,
+                        ease: "power4.out",
+                        duration: 3,
                     });
                 });
 
@@ -461,7 +460,7 @@ gsap.to(".BottomLastSliders .innerSlider", {
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".modal-link").forEach(link => {
         link.addEventListener("click", function (event) {
-            event.preventDefault(); // ✅ Prevent Page Scroll Issue
+            event.preventDefault();
         });
     });
 });
