@@ -1209,6 +1209,171 @@ a {
     padding-top: 110px;
 }
 
+/* INNOVATION HTML FILE STYLING GOES HERE */
+#innovation {
+    margin-top: 150px;
+}
+
+#innovation .content-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6997d13b05b913955807/65ce4f8e57e11edd123d37fe_CH_LIFESTYLE-26.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 44em;
+}
+
+#innovation .content-bg-rgba {
+    background: rgba(0, 0, 0, 0.38);
+    width: 100%;
+    height: 44em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#innovation .content-bg-rgba h2 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+#innovation .sideContent {
+    padding: 150px 100px 20px 100px;
+}
+
+#innovation .sideContent h2 {
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+
+#innovation .sideContent p {
+    font-size: 1.19rem;
+    color: #ccc;
+}
+
+#innovation .sideContent .form-label {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+}
+
+#innovation .sideContent .form-control {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #d2d182 !important;
+    border-radius: 5px;
+    color: #fff;
+}
+
+#innovation .sideContent .form-control::placeholder {
+    color: #888;
+}
+
+#innovation .sideContent .form-control:focus {
+    box-shadow: none;
+    border-bottom: 1px solid #007bfc !important;
+}
+
+#innovation .sideContent .icons {
+    font-size: 14px;
+    gap: 10px;
+}
+
+#innovation .sideContent .btn:hover {
+    background: linear-gradient(to right, #ebbb53, #ffdd94);
+    transition: 1s;
+}
+
+/* CONTACT US FILE STYLING GOES HERE */
+#contactUs {
+    margin-top: 130px;
+}
+
+#contactUs .content-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6997d13b05b913955807/65847fa8f117136eb232355f_WM2590A_WM2590C_L_02.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 44em;
+}
+
+#contactUs .content-bg-rgba {
+    background: rgba(0, 0, 0, 0.35);
+    width: 100%;
+    height: 44em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contactUs .content-bg-rgba h2 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+#contactUs .sideContent {
+    padding: 50px 100px 20px 100px;
+}
+
+#contactUs .sideContent .btn-toggle {
+    color: white;
+    background-color: #343a40; /* Dark background */
+    border: 1px solid #343a40;
+    transition: all 0.3s ease;
+}
+
+#contactUs .sideContent .btn-check:checked + .btn-toggle {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+#contactUs .sideContent p {
+    font-size: 1.19rem;
+    color: #ccc;
+}
+
+#contactUs .sideContent .form-label {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+}
+
+#contactUs .sideContent .form-control {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #d2d182 !important;
+    border-radius: 5px;
+    color: #fff;
+}
+
+#contactUs .sideContent .form-control::placeholder {
+    color: #888;
+}
+
+#contactUs .sideContent .form-control:focus {
+    box-shadow: none;
+    border-bottom: 1px solid #007bfc !important;
+}
+
+#contactUs .sideContent .icons {
+    font-size: 14px;
+    gap: 10px;
+}
+
+#contactUs .sideContent .btn-hover:hover {
+    background: linear-gradient(to right, #ebbb53, #ffdd94);
+    transition: 1s;
+}
+
+
+
+
 
 
 /* Responsive Styles */
@@ -1321,6 +1486,14 @@ a {
     #resourcesModal .modal-body p {
         font-size: 1.2rem;
         text-align: left !important;
+    }
+
+    #innovation .sideContent {
+        padding: 100px 0 20px 0;
+    }
+
+    #contactUs .sideContent {
+        padding: 100px 0 20px 0;
     }
 
 }

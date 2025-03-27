@@ -3,6 +3,124 @@ const currentPage = window.location.pathname;
 // GSAP Plugin Register
 gsap.registerPlugin(ScrollTrigger);
 
+function initializeNavigationAndAnimations() {
+    // NAVIGATION SCROLL BEHAVIOR
+    window.addEventListener("scroll", function () {
+        const nav = document.querySelector(".myNavigation");
+        const navOffset = nav.offsetTop;
+        nav.classList.add("fixed");
+    });
+
+    ScrollTrigger.create({
+    trigger: "body",
+    start: "top-=10 top",
+    onEnter: () => {
+        gsap.to(".myNavigation", { y: "0%", opacity: 1, duration: 0.5, ease: "power2.out" });
+    },
+    onLeaveBack: () => {
+        gsap.to(".myNavigation", { y: "-100%", opacity: 1, duration: 0.5, ease: "power2.out" });
+    }
+    });
+
+
+    // GSAP Animations for Navigation Links
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.querySelector(".menu-button");
+        const nav = document.querySelector(".myNavigation");
+        const desktopNavContainer = document.getElementById("desktopNavContainer");
+        const body = document.body;
+        const backgroundContainer = document.getElementById("backgroundContainer");
+        const icons = menuButton.querySelector(".icons");
+        const icon1 = menuButton.querySelector(".icon1");
+        const icon2 = menuButton.querySelector(".icon2");
+        const icon3 = menuButton.querySelector(".icon3");
+
+        menuButton.addEventListener("click", function () {
+            menuButton.classList.toggle("close");
+            body.classList.toggle("menu-open");
+
+            if (menuButton.classList.contains("close")) {
+                // Show background images
+                backgroundContainer.classList.add("visible");
+                nav.classList.add("navanimation");
+
+                // Load desktop.html content
+                fetch("desktop.html")
+                    .then(response => response.text())
+                    .then(data => {
+                        desktopNavContainer.innerHTML = data;
+                        desktopNavContainer.classList.remove("d-none");
+                        document.getElementById("desktopNav").classList.add("active");
+
+                        // Add event listener for close button in desktop.html
+                        const closeButton = document.querySelector("#desktopNav .close-button");
+                        closeButton.addEventListener("click", function () {
+                            document.getElementById("desktopNav").classList.remove("active");
+                            menuButton.classList.remove("close");
+                            body.classList.remove("menu-open");
+                            desktopNavContainer.classList.add("d-none");
+                            backgroundContainer.classList.remove("visible");
+
+                            // Restore Original Icon
+                            icons.style.transform = "rotate(-45deg)";
+                            icon1.style.width = "8px";
+                            icon1.style.transform = "none";
+                            icon2.style.opacity = "1";
+                            icon3.style.width = "9px";
+                            icon3.style.transform = "none";
+                        });
+
+                        // GSAP Animations for Navigation Links
+                        gsap.from("#desktopNav .left-nav .nav-links li", {
+                            opacity: 0,
+                            x: 100,
+                            ease: "power4.out",
+                            duration: 3,
+                        });
+                    });
+
+                // Change to Close Icon
+                icons.style.transform = "rotate(0deg)";
+                icon1.style.width = "20px";
+                icon1.style.transform = "rotate(45deg) translate(5px, 6px)";
+                icon2.style.opacity = "0";
+                icon3.style.width = "20px";
+                icon3.style.transform = "rotate(-45deg) translate(5px, -7px)";
+            } else {
+                // GSAP Animations for Navigation & Desktop Nav
+                gsap.set(["#desktopNav", "#backgroundContainer"], { y: "-150%", autoAlpha: 0 });
+
+                
+
+                // Hide desktop.html content and background images
+                document.getElementById("desktopNav").classList.remove("active");
+                body.classList.remove("menu-open");
+                desktopNavContainer.classList.add("d-none");
+                backgroundContainer.classList.remove("visible");
+                nav.classList.remove("navanimation");
+
+                // Restore Original Icon
+                icons.style.transform = "rotate(-45deg)";
+                icon1.style.width = "8px";
+                icon1.style.transform = "none";
+                icon2.style.opacity = "1";
+                icon3.style.width = "9px";
+                icon3.style.transform = "none";
+            }
+        });
+    });
+
+    // DYNAMIC BACKGROUND IMAGES
+    let currentImageIndex = 0;
+    const backgroundImages = document.querySelectorAll("#backgroundContainer .background-image");
+
+    setInterval(() => {
+        backgroundImages[currentImageIndex].classList.remove("active");
+        currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+        backgroundImages[currentImageIndex].classList.add("active");
+    }, 3000);
+}
+
 // BOTTOM LAST SLIDERS
 function setupBottomLastSliders() {
     gsap.to(".BottomLastSliders .innerSlider", {
@@ -476,121 +594,26 @@ if (currentPage.includes("index.html") || currentPage === "/") {
 
 } else if (currentPage.includes("/our_brands.html")) {
     // NAVIGATION SCROLL BEHAVIOR
-    window.addEventListener("scroll", function () {
-        const nav = document.querySelector(".myNavigation");
-        const navOffset = nav.offsetTop;
-        nav.classList.add("fixed");
-    });
-
-    ScrollTrigger.create({
-    trigger: "body",
-    start: "top-=10 top",
-    onEnter: () => {
-        gsap.to(".myNavigation", { y: "0%", opacity: 1, duration: 0.5, ease: "power2.out" });
-    },
-    onLeaveBack: () => {
-        gsap.to(".myNavigation", { y: "-100%", opacity: 1, duration: 0.5, ease: "power2.out" });
-    }
-    });
-
-
-    // GSAP Animations for Navigation Links
-    document.addEventListener("DOMContentLoaded", function () {
-        const menuButton = document.querySelector(".menu-button");
-        const nav = document.querySelector(".myNavigation");
-        const desktopNavContainer = document.getElementById("desktopNavContainer");
-        const body = document.body;
-        const backgroundContainer = document.getElementById("backgroundContainer");
-        const icons = menuButton.querySelector(".icons");
-        const icon1 = menuButton.querySelector(".icon1");
-        const icon2 = menuButton.querySelector(".icon2");
-        const icon3 = menuButton.querySelector(".icon3");
-
-        menuButton.addEventListener("click", function () {
-            menuButton.classList.toggle("close");
-            body.classList.toggle("menu-open");
-
-            if (menuButton.classList.contains("close")) {
-                // Show background images
-                backgroundContainer.classList.add("visible");
-                nav.classList.add("navanimation");
-
-                // Load desktop.html content
-                fetch("desktop.html")
-                    .then(response => response.text())
-                    .then(data => {
-                        desktopNavContainer.innerHTML = data;
-                        desktopNavContainer.classList.remove("d-none");
-                        document.getElementById("desktopNav").classList.add("active");
-
-                        // Add event listener for close button in desktop.html
-                        const closeButton = document.querySelector("#desktopNav .close-button");
-                        closeButton.addEventListener("click", function () {
-                            document.getElementById("desktopNav").classList.remove("active");
-                            menuButton.classList.remove("close");
-                            body.classList.remove("menu-open");
-                            desktopNavContainer.classList.add("d-none");
-                            backgroundContainer.classList.remove("visible");
-
-                            // Restore Original Icon
-                            icons.style.transform = "rotate(-45deg)";
-                            icon1.style.width = "8px";
-                            icon1.style.transform = "none";
-                            icon2.style.opacity = "1";
-                            icon3.style.width = "9px";
-                            icon3.style.transform = "none";
-                        });
-
-                        // GSAP Animations for Navigation Links
-                        gsap.from("#desktopNav .left-nav .nav-links li", {
-                            opacity: 0,
-                            x: 100,
-                            ease: "power4.out",
-                            duration: 3,
-                        });
-                    });
-
-                // Change to Close Icon
-                icons.style.transform = "rotate(0deg)";
-                icon1.style.width = "20px";
-                icon1.style.transform = "rotate(45deg) translate(5px, 6px)";
-                icon2.style.opacity = "0";
-                icon3.style.width = "20px";
-                icon3.style.transform = "rotate(-45deg) translate(5px, -7px)";
-            } else {
-                // GSAP Animations for Navigation & Desktop Nav
-                gsap.set(["#desktopNav", "#backgroundContainer"], { y: "-150%", autoAlpha: 0 });
-
-                
-
-                // Hide desktop.html content and background images
-                document.getElementById("desktopNav").classList.remove("active");
-                body.classList.remove("menu-open");
-                desktopNavContainer.classList.add("d-none");
-                backgroundContainer.classList.remove("visible");
-                nav.classList.remove("navanimation");
-
-                // Restore Original Icon
-                icons.style.transform = "rotate(-45deg)";
-                icon1.style.width = "8px";
-                icon1.style.transform = "none";
-                icon2.style.opacity = "1";
-                icon3.style.width = "9px";
-                icon3.style.transform = "none";
-            }
-        });
-    });
-
-    // DYNAMIC BACKGROUND IMAGES
-    let currentImageIndex = 0;
-    const backgroundImages = document.querySelectorAll("#backgroundContainer .background-image");
-
-    setInterval(() => {
-        backgroundImages[currentImageIndex].classList.remove("active");
-        currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
-        backgroundImages[currentImageIndex].classList.add("active");
-    }, 3000);
+    initializeNavigationAndAnimations();
 
     // BOTTOM LAST SLIDERS
     setupBottomLastSliders();
+
+} else if (currentPage.includes("/innovation.html")) {
+    // NAVIGATION SCROLL BEHAVIOR
+    initializeNavigationAndAnimations();
+
+    gsap.from("#innovation .content-background h2", {
+        y: 100,
+        duration: 1,
+    });
+
+} else if (currentPage.includes("/contact.html")) {
+    // NAVIGATION SCROLL BEHAVIOR
+    initializeNavigationAndAnimations();
+
+    gsap.from("#contactUs .content-background h2", {
+        y: 100,
+        duration: 1,
+    });
 }
