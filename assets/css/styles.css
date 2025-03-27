@@ -1138,6 +1138,79 @@ a {
     transform: translateX(-50%) scaleX(0) !important;
 }
 
+/* FOOTER STYLING GOES HERE */
+.social-section {
+    gap: 1rem;
+}
+  
+  .social-heading {
+    font-size: 1.1rem;
+    color: #f8f9fa; 
+    font-weight: 400; 
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+  
+.social-divider {
+    border: 1px solid #ffffff;
+    width: 4%;
+    margin: 0;
+    opacity: 1;
+}
+  
+.social-icon {
+    width: 2.3em; 
+    height: 2.3em; 
+    background-color: #343a40; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, filter 0.3s; 
+    cursor: pointer;
+}
+  
+.social-icon i {
+    font-size: 1.25rem; 
+    color: #f8f9fa; 
+}
+  
+  /* Hover Effects */
+.social-icon.twitter:hover {
+    background-color: black; 
+}
+  
+  .social-icon.facebook:hover {
+    background-color: #3b5998;
+}
+  
+.social-icon.instagram:hover {
+    background: linear-gradient(
+      45deg,
+      #f09433,
+      #e6683c,
+      #dc2743,
+      #cc2366,
+      #bc1888
+    );
+}
+  
+  .social-icon.instagram:hover {
+    filter: brightness(1.2);
+}
+
+/* OUR BRANDS HTML FILE STYLING GOES HERE */
+.myNavigation.shadow {
+    box-shadow: 0px 5px 10px 10px #000 !important;
+}
+
+#representImages1.ourBrands {
+    padding-top: 110px;
+}
+
+
+
 /* Responsive Styles */
 @media (min-width: 1200px) {
     .modal-xl {
