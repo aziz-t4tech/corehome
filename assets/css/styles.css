@@ -1371,6 +1371,405 @@ a {
     transition: 1s;
 }
 
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.goBackBtn {
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.goBackBtn .btn {
+    background: linear-gradient(to right, #fff, #fff);
+    color: #000 !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.goBackBtn .btn:hover {
+    background: linear-gradient(to right, #efd75c, #ebbb53);
+}
+
+
+.coreBamboo .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65ce949c349e9f461436b8a6_Silicone%20%26%20Bamboo-2%20(3).jpg');
+}
+
+.commonSection .section-background {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.commonSection .section-background .section-RGBA {
+    background: linear-gradient(to top, black, transparent);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.commonSection .section-background img {
+    z-index: 1;
+    filter: brightness(200%) grayscale();
+    object-fit: contain;
+    max-width: 68%;
+    max-height: 46%;
+    position: relative;
+}
+
+.commonSectionPara {
+    padding: 10px 303px 50px;
+    font-size: 1.6rem;
+}
+
+.commonBrandsSection .glow-on-hover {
+    text-decoration: none;
+    color: #ebbb53;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    text-transform: uppercase;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+
+.commonBrandsSection .glow-on-hover:hover {
+    text-shadow: 
+    0 0 10px #000000,
+    0 0 20px #fafafa,
+    0 0 30px #ffed8e,
+    0 0 40px #ffe86d,
+    0 0 50px #efd75c
+}
+
+/* GALLERY IMAGES START HERE */
+/* GALLERY IMAGES STYLING (original gallery) */
+.gallery .wrap {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.gallery .wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+    border-radius: 5px;
+}
+
+.gallery .wrap img:hover {
+    transform: scale(1.04);
+}
+
+/* MODAL GALLERY STYLING (separate from main gallery) */
+.gallery-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+.gallery-modal.active {
+    display: flex;
+}
+
+.gallery-modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-modal-main-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Navigation buttons */
+.gallery-modal-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.gallery-modal-nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.gallery-modal-prev {
+    left: 20px;
+}
+
+.gallery-modal-next {
+    right: 20px;
+}
+
+/* Thumbnails container - UPDATED FOR SCROLL */
+.gallery-modal-thumbnails {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome/Safari */
+.gallery-modal-thumbnails::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-modal-thumbnail {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 4px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    flex-shrink: 0; /* Prevent thumbnails from shrinking */
+}
+
+.gallery-modal-thumbnail:hover,
+.gallery-modal-thumbnail.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Close button */
+.gallery-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.gallery-modal-close:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+  
+
+
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.coreKitchen .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65ce9b837d0287673974244e_core-kitchen.webp');
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.manna-hydration .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/658089d101313c787f29b55d_BRAND%20IMAGE%20-%20Manna.jpeg');
+}
+
+.manna-hydration.commonSection .section-RGBA {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.brooklyn-steel-co .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65808bd50f4b142dd5d6e3ea_BRAND%20IMAGE%20-%20BKLYN%20STEEL%20CO.jpeg');
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.tal-hydration .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65808a91db39146af7b8ad81_BRAND%20IMAGE%20-%20TAL.jpeg');
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.hydragear .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65ce9ad157b9e13b220b2c28_Screen%20Shot%202024-02-15%20at%206.13.02%20PM.webp');
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.thyme-and-table .section-background {
+    background-image: url('');
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.wild-and-woofy .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65808eacd3a8a3d3fe2ea501_wildandwoofycovercard.jpg');
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.arete-athene .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65808fad31534fb0fedf0ff5_arete%20and%20athene.jpg');
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.yellow-cab-games .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65808d2bcc8368a4fc22e8aa_yellow%20cab%20games.jpg');
+}
+
+.yellow-cab-games img {
+    max-width: 85% !important;
+    max-height: 85% !important;
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.sweet-sugar-fantasy .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/658094fcd62721c433c0ab3c_Screen%20Shot%202023-12-11%20at%205.01.55%20PM.png');
+}
+
+.sweet-sugar-fantasy .section-background .section-RGBA {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.roam-and-repeat .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/6580a3d26274f8391ad15aea_RR42329_02.jpg');
+}
+
+.roam-and-repeat .section-background .section-RGBA {
+    background: linear-gradient(to top, black, transparent);
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.mayim .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65d77d2153c6c771495859fc_Mayim_Lifestyle_01.jpg');
+}
+
+.mayim .section-background .section-RGBA {
+    background: linear-gradient(to top, black, transparent);
+}
+
+.mayim img {
+    max-width: 80% !important;
+    max-height: 80% !important;
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.maison-de-base .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65d785a0327de59b957a87a3_maisondebase%20main%20thumbnail.webp');
+}
+
+.maison-de-base img {
+    max-width: 37rem !important;
+    max-height: 37rem !important;
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.brooklyn-refinery .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65d787b46ba46d6a9a2886e2_Bklyn%20Refinery%20Thumbnail%20Main.jpg');
+}
+
+.brooklyn-refinery img {
+    max-width: 33rem !important;
+    max-height: 33rem !important;
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.well-and-dowd .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65d78c4ba38e8971c066bc37_wellanddowd%20-%20thumbnail%20main.jpg');
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.medici .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65d77b89a4f705134a2d232c_Medici_LifeStyle_Web_019.jpg');
+}
+
+.medici img {
+    max-width: 30rem !important;
+    max-height: 30rem !important;
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.scribble-and-scribe .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65d791e6707860ff6462163f_41709_02.jpg');
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.tfw .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/65d78dbc97f20f26f320be63_HBA_TFW_Lifestyle_2022_08.jpg');
+}
+
+.tfw img {
+    max-width: 35rem !important;
+    max-height: 35rem !important;
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+/* CORE-BAMBOO PAGE STYLING START HERE */
+.w-plus-w .section-background {
+    background-image: url('https://cdn.prod.website-files.com/657f6998d13b05b9139559e8/658091c60060d495633dfe60_WW_Website_2022_14.jpg');
+}
+
+.w-plus-w img {
+    max-width: 27rem !important;
+    max-height: 27rem !important;
+}
+
+/* CORE-BAMBOO PAGE STYLING END HERE */
+
+
 
 
 
@@ -1496,6 +1895,59 @@ a {
         padding: 100px 0 20px 0;
     }
 
+    .gallery .wrap {
+        height: auto; /* Allow height to adjust automatically */
+    }
+    
+    .gallery .col-8, .gallery .col-4 {
+        height: auto;
+    }
+
+    .gallery-modal-nav-button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    
+    .gallery-modal-thumbnail {
+        width: 60px;
+        height: 45px;
+    }
+    
+    .gallery-modal-content {
+        width: 95%;
+        height: 95%;
+    }
+
+    .gallery-modal-nav-button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    
+    .gallery-modal-thumbnail {
+        width: 60px;
+        height: 45px;
+    }
+    
+    .gallery-modal-content {
+        width: 95%;
+        height: 95%;
+    }
+    
+    .gallery-modal-prev {
+        left: 10px;
+    }
+    
+    .gallery-modal-next {
+        right: 10px;
+    }
+
+    .commonSectionPara {
+        padding: 10px 0px 50px;
+        font-size: 1.1rem;
+    }
+
 }
 
 
@@ -1532,4 +1984,12 @@ a {
     .imageContainer:hover .btn {
         bottom: 3px;
     }
+
+    .gallery .wrap {
+        height: auto; /* Allow height to adjust automatically */
+      }
+    
+      .gallery .col-8, .gallery .col-4 {
+        height: auto;
+      }
 }
