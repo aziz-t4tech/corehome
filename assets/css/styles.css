@@ -409,6 +409,85 @@ a {
     display: none !important;
 }
 
+/* Search Overlay (Full-Screen Cover) */
+.myNavigation .search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    display: none;
+}
+
+.search-overlay .searchText {
+    color: #ffffff09;
+    font-size: 20rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+
+/* Search Box Design */
+.myNavigation .search-container {
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    position: relative;
+}
+
+/* Input Field */
+.myNavigation .search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 2rem;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #ffc760;
+    border-radius: 5px;
+    background-color: transparent;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.myNavigation .search-input::placeholder {
+    color: #ffffff; /* Light pink shade */
+}
+
+/* Close Button */
+#closeSearch {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 5vw;
+}
+
+#closeSearch svg {
+    font-size: 2.5rem;
+    rotate: 0;
+    transition: rotate .5s ease-in-out;
+}
+
+#closeSearch:hover svg {
+    rotate: 90deg;
+    font-weight: 500;
+}
+
+
+/* NAVIGATION MENU STYLING END HERE */
+
   
 
 /* ABOUT US STYLING GOES HERE */
@@ -1871,7 +1950,8 @@ a {
     }
 
     #desktopNav .left-nav .nav-links {
-        margin-top: 10px;
+        margin-top: 50px;
+        padding:  0 0 0 0;
     }
 
     #desktopNav .right-nav {
@@ -1947,6 +2027,92 @@ a {
         padding: 10px 0px 50px;
         font-size: 1.1rem;
     }
+
+    /* LEFT TO RIGHT SLIDER ON TOP BOTTOM SLIDER */
+    .whatWeAre .slide {
+        flex: 0 0 140vw !important;
+    }
+
+    .whatWeAre .slide2 {
+        flex: 0 0 220vw !important;
+    }
+    
+    .whatWeAre .textContnt1 {
+        padding: 100px 10px;
+    }
+
+    .whatWeAre .textContnt1 h2 {
+        font-size: 2.7rem;
+    }
+
+    .whatWeAre .textContnt1 p {
+        font-size: 1.1rem;
+    }
+
+    .whatWeAre .imageContnt1 {
+        padding-left: 80px;
+        margin-top: 40px;
+    }
+
+    .whatWeAre .imageContnt1 .image1 {
+        width: 70vw;
+        height: auto;
+    }
+
+    .whatWeAre .imageContnt1 .image2 {
+        width: 40vw;
+        height: auto;
+        top: 3%;
+        left: 80%;
+    }
+
+    .whatWeAre .textContnt2 {
+        margin-top: 20px;
+        margin-left: 200px;
+    }
+
+    .whatWeAre .textContnt2 h2 {
+        font-size: 2.4rem;
+    }
+
+    .whatWeAre .textContnt2 span {
+        font-size: 1.2rem;
+    }
+
+    .whatWeAre .textContnt2 p {
+        font-size: 1rem;
+    }
+
+    .whatWeAre .textContnt2 h3 {
+        font-size: 2.8rem;
+    }
+
+    .whoWeAre h2 {
+        font-size: 4.5rem !important;
+    }
+
+    .whoWeAre p {
+        font-size: 1.05rem !important;
+    }
+
+    .whoWeAre .headingYellow {
+        font-size: 2.5rem !important;
+    }
+    
+    .whatWeDo .sideContent h2 {
+        font-size: 4.5rem;
+        font-weight: 600;
+    }
+
+    .whatWeDo .sideContent p {
+        font-size: 1.2rem;
+    }
+
+    #desktopNav .left-nav {
+        text-align: left;
+    }
+
+
 
 }
 

@@ -480,53 +480,103 @@ if (currentPage.includes("index.html") || currentPage === "/") {
 
 
     // LEFT TO RIGHT SLIDER ON SCROLL UP AND DOWN
-    gsap.to(".items-container", {
-    x: "-220vw",
-    ease: "power5.inOut",
-    scrollTrigger: {
-        trigger: ".whatWeAre",
-        start: "top 0",    
-        end: "+=4500",       
-        scrub: 1.4,         
-        pin: true,
+    ScrollTrigger.matchMedia({
+
+    // ✅ Large devices (Desktop + Tablet)
+    "(min-width: 768px)": function () {
+        // Horizontal Scroll animation
+        gsap.to(".items-container", {
+            x: "-220vw",
+            ease: "power5.inOut",
+            scrollTrigger: {
+                trigger: ".whatWeAre",
+                start: "top top",
+                end: "+=4500",
+                scrub: 1.4,
+                pin: true,
+            }
+        });
+
+        // Vertical animation for col1 and col2
+        const col1 = document.querySelector(".imageContnt3 .col1");
+        const col2 = document.querySelector(".imageContnt3 .col2");
+
+        if (col1 && col2) {
+        col1.innerHTML += col1.innerHTML;
+        col2.innerHTML += col2.innerHTML;
+
+        const moveDistance = col1.offsetHeight / 2;
+
+        gsap.from(col1, {
+                y: `-=${moveDistance}`,
+                ease: "none",
+                duration: 15,
+                repeat: -1,
+                modifiers: {
+                y: (y) => gsap.utils.unitize(val => parseFloat(val) % moveDistance)(y)
+            }
+        });
+
+        gsap.to(col2, {
+                y: `-=${moveDistance}`,
+                ease: "none",
+                duration: 15,
+                repeat: -1,
+                modifiers: {
+                y: (y) => gsap.utils.unitize(val => parseFloat(val) % moveDistance)(y)
+            }
+        });
+        }
+    },
+
+    // ✅ Small devices
+    "(max-width: 767px)": function () {
+        // Horizontal Scroll animation
+        gsap.to(".items-container", {
+            x: "-490vw",
+            ease: "power5.inOut",
+            scrollTrigger: {
+                trigger: ".whatWeAre",
+                start: "top top",
+                end: "+=4000",
+                scrub: 2,
+                pin: true,
+            }
+        });
+
+        // Vertical animation for col1 and col2
+        const col1 = document.querySelector(".imageContnt3 .col1");
+        const col2 = document.querySelector(".imageContnt3 .col2");
+
+        if (col1 && col2) {
+            col1.innerHTML += col1.innerHTML;
+            col2.innerHTML += col2.innerHTML;
+
+            const moveDistance = col1.offsetHeight / 2;
+
+            gsap.from(col1, {
+                y: `-=${moveDistance}`,
+                ease: "none",
+                duration: 15,
+                repeat: -1,
+                modifiers: {
+                y: (y) => gsap.utils.unitize(val => parseFloat(val) % moveDistance)(y)
+                }
+            });
+
+            gsap.to(col2, {
+                y: `-=${moveDistance}`,
+                ease: "none",
+                duration: 15,
+                repeat: -1,
+                modifiers: {
+                y: (y) => gsap.utils.unitize(val => parseFloat(val) % moveDistance)(y)
+                }
+            });
+        }
     }
     });
 
-
-    // Top Bottom Slider in left to right slide content
-
-    const col1 = document.querySelector(".imageContnt3 .col1");
-    const col2 = document.querySelector(".imageContnt3 .col2");
-
-
-    col1.innerHTML += col1.innerHTML;
-    col2.innerHTML += col2.innerHTML;
-
-
-    const moveDistance = col1.offsetHeight / 2;
-
-
-    gsap.from(col1, {
-    y: `-=${moveDistance}`,
-    ease: "none",
-    duration: 15,              
-    repeat: -1,
-    modifiers: {
-        
-        y: (y) => gsap.utils.unitize(val => parseFloat(val) % moveDistance)(y)
-    }
-    });
-
-
-    gsap.to(col2, {
-    y: `-=${moveDistance}`,   
-    ease: "none",
-    duration: 15,
-    repeat: -1,
-    modifiers: {
-        y: (y) => gsap.utils.unitize(val => parseFloat(val) % moveDistance)(y)
-    }
-    });
 
 
     // We represent the next generation of housewares SECTION ANIMATION START HERE
@@ -537,7 +587,7 @@ if (currentPage.includes("index.html") || currentPage === "/") {
         start: "top 80%",  
         end: "bottom 35%",    
         scrub: true
-    }
+        }
     })
     .fromTo(".headingContent p span", 
     { opacity: 0, scale: 1 }, 
@@ -590,6 +640,26 @@ if (currentPage.includes("index.html") || currentPage === "/") {
                 event.preventDefault();
             });
         });
+    });
+
+    document.getElementById("searchToggle").addEventListener("click", function(event) {
+        event.preventDefault();
+        
+        // Show Search Overlay
+        document.getElementById("searchOverlay").style.display = "flex";
+        
+        // Hide Logo & Search Icon
+        document.getElementById("logoContainer").style.display = "none";
+        document.getElementById("searchIconContainer").style.display = "none";
+    });
+    
+    document.getElementById("closeSearch").addEventListener("click", function() {
+        // Hide Search Overlay
+        document.getElementById("searchOverlay").style.display = "none";
+        
+        // Show Logo & Search Icon Again
+        document.getElementById("logoContainer").style.display = "block";
+        document.getElementById("searchIconContainer").style.display = "block";
     });
 
 } else if (currentPage.includes("/our_brands.html")) {
